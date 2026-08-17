@@ -10,7 +10,6 @@ import { RentalsSection } from './components/RentalsSection';
 import { MtbSection } from './components/MtbSection';
 import { AdventureStories } from './components/AdventureStories';
 import { ReviewsSection } from './components/ReviewsSection';
-import { InstagramGrid } from './components/InstagramGrid';
 import { BookingCta } from './components/BookingCta';
 import { Footer } from './components/Footer';
 import { TourDetailView } from './components/TourDetailView';
@@ -18,7 +17,6 @@ import { SeoLandingPageView } from './components/SeoLandingPageView';
 import { BookingModal } from './components/BookingModal';
 import { MountainWeatherWidget } from './components/MountainWeatherWidget';
 import { HimalayanRouteMap } from './components/HimalayanRouteMap';
-import { PhotoGallery } from './components/PhotoGallery';
 import { ContactView } from './components/ContactView';
 import { NotFoundView } from './components/NotFoundView';
 import { ArticleDetailView } from './components/ArticleDetailView';
@@ -361,16 +359,12 @@ function AppContent() {
               onRentBike={(bike: FleetBike) => handleOpenBooking(undefined, bike.category)}
             />
 
-            <PhotoGallery />
-
             <AdventureStories
               articles={STORIES_DATA}
               onOpenArticleReader={handleOpenArticleReader}
             />
 
             <ReviewsSection />
-
-            <InstagramGrid />
 
             <BookingCta
               onExploreExpeditions={() => handleNavigate('expeditions')}
