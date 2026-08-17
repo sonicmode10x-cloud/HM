@@ -1,0 +1,7 @@
+{
+  "name": "Himalayan Monster - Two Wheels. Wild Nepal.",
+  "description": "Premium motorcycle and MTB expeditions, E-MTB tours, and high-altitude Himalayan bike rentals based in Pokhara, Nepal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
