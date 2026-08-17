@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLogo } from '../context/LogoContext';
 
 interface LogoProps {
   className?: string;
@@ -13,9 +14,74 @@ export function HimalayanMonsterLogo({
   height = 'auto',
   lightMode = false
 }: LogoProps) {
-  if (variant === 'icon') {
+  let logoContext;
+  try {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    logoContext = useLogo();
+  } catch {
+    logoContext = null;
+  }
+
+  const config = logoContext?.config;
+  const isCustomImage = config?.sourceType === 'custom-image' && Boolean(config?.customImageUrl);
+  const isCrestIcon = config?.sourceType === 'crest-icon';
+
+  // 1. If custom uploaded image / configured path is active:
+  if (isCustomImage && config?.customImageUrl) {
+    if (variant === 'compact') {
+      const scale = config.navbarScale || 1.0;
+      return (
+        <div 
+          className={`flex items-center gap-4 select-none ${className}`}
+          style={{ transform: `scale(${scale})`, transformOrigin: 'left center' }}
+        >
+          <img
+            src={config.customImageUrl}
+            alt={config.customImageAlt || 'Himalayan Monster Logo'}
+            className="max-h-20 sm:max-h-24 w-auto object-contain drop-shadow-md rounded-xs"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      );
+    }
+
+    if (variant === 'icon' || variant === 'badge') {
+      return (
+        <div className={`relative inline-block ${className}`} style={{ height: height === 'auto' ? '80px' : height }}>
+          <img
+            src={config.customImageUrl}
+            alt={config.customImageAlt || 'Himalayan Monster Logo'}
+            className="w-full h-full object-contain drop-shadow-md rounded-xs"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      );
+    }
+
+    // Default 'full' variant
+    const scale = config.footerScale || 1.0;
     return (
-      <div className={`relative inline-block ${className}`} style={{ height }}>
+      <div 
+        className={`relative inline-flex flex-col items-center select-none ${className}`} 
+        style={{ height, transform: `scale(${scale})`, transformOrigin: 'center center' }}
+      >
+        <img
+          src={config.customImageUrl}
+          alt={config.customImageAlt || 'Himalayan Monster Logo'}
+          className="max-h-64 sm:max-h-80 md:max-h-96 w-auto object-contain drop-shadow-2xl rounded-xs"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    );
+  }
+
+  // 2. If crest-icon preset is selected or requested:
+  if (variant === 'icon' || isCrestIcon) {
+    return (
+      <div className={`relative inline-block ${className}`} style={{ height: height === 'auto' ? '80px' : height }}>
         <svg
           viewBox="0 0 100 100"
           fill="none"
@@ -61,11 +127,11 @@ export function HimalayanMonsterLogo({
 
   if (variant === 'compact') {
     return (
-      <div className={`flex items-center gap-3 select-none ${className}`}>
-        {/* Vector Pure Alpine Peaks + Enduro Wheel Emblem */}
-        <div className="relative w-12 h-12 shrink-0 rounded-md overflow-hidden bg-gradient-to-b from-[#0F1B2E] to-[#080B12] border border-[#e06d2d]/60 p-1 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
+      <div className={`flex items-center gap-3.5 select-none ${className}`}>
+        {/* Vector Pure Alpine Peaks + Enduro Wheel Emblem - 100% Larger */}
+        <div className="relative w-18 h-18 sm:w-20 sm:h-20 shrink-0 rounded-md overflow-hidden bg-gradient-to-b from-[#0F1B2E] to-[#080B12] border-2 border-[#e06d2d]/80 p-1 flex items-center justify-center shadow-2xl group-hover:scale-105 transition-transform">
           <svg viewBox="0 0 100 100" className="w-full h-full" fill="none">
-            {/* Mountain Peaks without clutter */}
+            {/* Mountain Peaks */}
             <polygon points="50,10 72,42 28,42" fill="#0284C7" />
             <polygon points="50,10 58,24 42,24" fill="#FFFFFF" />
             <polygon points="24,22 42,46 6,46" fill="#0369A1" />
@@ -87,22 +153,22 @@ export function HimalayanMonsterLogo({
           </svg>
         </div>
 
-        {/* Multi-Color Typography Stack */}
+        {/* Multi-Color Typography Stack - 100% Larger */}
         <div className="flex flex-col text-left">
           <div className="flex items-center gap-0.5 leading-none font-heading font-black tracking-wider uppercase">
-            <span className="text-white text-xl sm:text-2xl font-black">H</span>
-            <span className="text-[#00AEEF] text-xl sm:text-2xl font-black">i</span>
-            <span className="text-white text-xl sm:text-2xl font-black">MALAYAN</span>
+            <span className="text-white text-2xl sm:text-3xl md:text-4xl font-black drop-shadow-sm">H</span>
+            <span className="text-[#00AEEF] text-2xl sm:text-3xl md:text-4xl font-black drop-shadow-sm">i</span>
+            <span className="text-white text-2xl sm:text-3xl md:text-4xl font-black drop-shadow-sm">MALAYAN</span>
           </div>
-          <div className="flex items-center tracking-wider font-heading font-black text-sm sm:text-base leading-tight mt-0.5">
+          <div className="flex items-center tracking-wider font-heading font-black text-lg sm:text-xl md:text-2xl leading-tight mt-0.5 sm:mt-1">
             <span className="text-[#DC2626]">M</span>
             <span className="text-[#EA580C]">O</span>
             <span className="text-[#F59E0B]">N</span>
             <span className="text-[#65A30D]">S</span>
             <span className="text-[#0284C7]">T</span>
             <span className="text-[#2563EB]">E</span>
-            <span className="text-[#7C3AED] mr-1.5">R</span>
-            <span className="text-[10px] tracking-[0.2em] font-mono font-bold text-neutral-300 uppercase pl-1 border-l border-white/20">
+            <span className="text-[#7C3AED] mr-2">R</span>
+            <span className="text-xs sm:text-sm tracking-[0.2em] font-mono font-bold text-neutral-200 uppercase pl-1.5 border-l-2 border-[#e06d2d]">
               EXTREME TOURS
             </span>
           </div>

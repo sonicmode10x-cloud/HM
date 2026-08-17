@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Compass, Phone, ChevronRight, MessageCircle } from 'lucide-react';
+import { Menu, X, Compass, Phone, ChevronRight, MessageCircle, Upload, Sliders } from 'lucide-react';
 import { HimalayanMonsterLogo } from './HimalayanMonsterLogo';
+import { Analytics } from '../lib/analytics';
+import { useLogo } from '../context/LogoContext';
 
 interface NavbarProps {
   currentView: string;
@@ -11,6 +13,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, onOpenBooking }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { setIsConfigModalOpen, isCustomImageActive } = useLogo();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +28,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, onOpenB
     { label: 'MOTO TOURS', view: 'motorcycles' },
     { label: 'MTB', view: 'mtb' },
     { label: 'RENTALS', view: 'rentals' },
-    { label: 'ABOUT US', view: 'about' }
+    { label: 'ABOUT US', view: 'about' },
+    { label: 'CONTACT', view: 'contact' }
   ];
 
   return (
@@ -33,8 +37,8 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, onOpenB
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled || currentView !== 'home'
-            ? 'bg-[#0c0c0e]/95 backdrop-blur-md border-b border-white/10 py-3 shadow-2xl'
-            : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-4'
+            ? 'bg-[#0c0c0e]/95 backdrop-blur-md border-b border-white/10 py-3 sm:py-3.5 shadow-2xl'
+            : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-4 sm:py-5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -73,6 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, onOpenB
               href="https://wa.me/9779800000000?text=Hello%20Himalayan%20Monster,%20I'm%20interested%20in%20planning%20a%20ride%20in%20Nepal."
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => Analytics.trackWhatsAppClick('Navbar')}
               className="flex items-center gap-2 text-xs font-semibold text-neutral-300 hover:text-white bg-white/5 hover:bg-white/10 px-3.5 py-2.5 rounded-sm border border-white/10 transition-colors"
               title="Chat with our Pokhara Base on WhatsApp"
             >
@@ -155,6 +160,19 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, onOpenB
                 className="w-full text-left py-2 font-sans text-sm text-neutral-400 hover:text-white flex items-center justify-between"
               >
                 <span>Permits & FAQ</span>
+                <ChevronRight className="w-4 h-4 text-neutral-600" />
+              </button>
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onNavigate('admin');
+                }}
+                className="w-full text-left py-2 font-sans text-sm text-[#e06d2d] hover:text-white flex items-center justify-between border-t border-white/10 pt-3"
+              >
+                <span className="flex items-center gap-2">
+                  <Upload className="w-4 h-4" />
+                  <span>Admin Logo & Brand Studio</span>
+                </span>
                 <ChevronRight className="w-4 h-4 text-neutral-600" />
               </button>
             </div>

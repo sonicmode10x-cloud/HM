@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { HimalayanMonsterLogo } from './HimalayanMonsterLogo';
 import { Expedition, FleetBike, BookingFormData, TourCategory } from '../types';
+import { Analytics } from '../lib/analytics';
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -64,6 +65,14 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    Analytics.trackBookingSubmission({
+      tourId: formData.tourId,
+      tourTitle: formData.tourTitle,
+      category: formData.category,
+      riderCount: formData.riderCount,
+      durationDays: formData.durationDays,
+      bookingType: formData.bookingType
+    });
     setIsSubmitted(true);
   };
 

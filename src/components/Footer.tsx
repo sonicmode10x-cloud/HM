@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook, Youtube, Compass, ArrowUpRight } from 'lucide-react';
-import { HimalayanMonsterLogo } from './HimalayanMonsterLogo';
+import { Analytics } from '../lib/analytics';
 
 interface FooterProps {
   onNavigate: (view: string, slug?: string) => void;
@@ -27,11 +27,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main 4-Column Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
-          {/* Col 1: Brand & Tagline (4 Cols) */}
+          {/* Col 1: Brand & Tagline */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="max-w-xs -ml-2">
-              <HimalayanMonsterLogo variant="full" />
-            </div>
+            <h3 className="font-heading text-2xl font-black tracking-wider text-white uppercase">
+              HIMALAYAN <span className="text-[#e06d2d]">MONSTER</span>
+            </h3>
 
             <p className="font-heading text-lg font-bold tracking-widest text-[#e06d2d] uppercase">
               TWO WHEELS. WILD NEPAL.
@@ -128,6 +128,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
                 </button>
               </li>
               <li>
+                <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors cursor-pointer">
+                  Contact Base Camp
+                </button>
+              </li>
+              <li>
                 <button onClick={() => onNavigate('stories')} className="hover:text-white transition-colors cursor-pointer">
                   Adventure Stories (Blog)
                 </button>
@@ -140,6 +145,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
               <li>
                 <button onClick={() => onNavigate('private')} className="hover:text-white transition-colors cursor-pointer">
                   Private / Custom Tours
+                </button>
+              </li>
+              <li className="pt-2 border-t border-white/5">
+                <button onClick={() => onNavigate('admin')} className="text-neutral-500 hover:text-[#e06d2d] transition-colors cursor-pointer flex items-center gap-1.5 font-mono text-xs">
+                  <span>Base Camp Admin</span>
                 </button>
               </li>
             </ul>
@@ -163,6 +173,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
                   href="https://wa.me/9779800000000?text=Hello%20Himalayan%20Monster"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => Analytics.trackWhatsAppClick('Footer')}
                   className="hover:underline font-mono text-emerald-400 font-semibold"
                 >
                   WhatsApp: +977 980 000 0000
@@ -171,12 +182,22 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
 
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#e06d2d] shrink-0" />
-                <span className="font-mono">+977 61 460000</span>
+                <a
+                  href="tel:+97761460000"
+                  onClick={() => Analytics.trackPhoneClick('Footer')}
+                  className="font-mono hover:text-white transition-colors"
+                >
+                  +977 61 460000
+                </a>
               </div>
 
               <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#e06d2d] shrink-0" />
-                <a href="mailto:ride@himalayanmonster.com" className="hover:underline font-mono text-neutral-300">
+                <a 
+                  href="mailto:ride@himalayanmonster.com" 
+                  onClick={() => Analytics.trackEmailClick('Footer')}
+                  className="hover:underline font-mono text-neutral-300"
+                >
                   ride@himalayanmonster.com
                 </a>
               </div>

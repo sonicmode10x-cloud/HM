@@ -1,0 +1,8 @@
+# Himalayan Monster Robots.txt
+# Website: https://himalayanmonster.com
+
+User-agent: *
+Allow: /
+
+# Sitemap Reference
+Sitemap: https://himalayanmonster.com/sitemap.xml
