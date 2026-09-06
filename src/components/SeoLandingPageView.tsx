@@ -74,13 +74,13 @@ export const SeoLandingPageView: React.FC<SeoLandingPageViewProps> = ({
               </button>
 
               <a
-                href={`https://wa.me/9779800000000?text=Hello%20Himalayan%20Monster,%20I%20am%20inquiring%20about%20${encodeURIComponent(pageData.targetKeyword)}`}
+                href={`https://wa.me/9779812100453?text=Hello%20Himalayan%20Monster,%20I%20am%20inquiring%20about%20${encodeURIComponent(pageData.targetKeyword)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-emerald-600/90 hover:bg-emerald-600 text-white font-sans text-xs font-semibold py-3.5 px-5 rounded-sm flex items-center gap-2"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Direct WhatsApp (+977)</span>
+                <span>Direct WhatsApp (+977 981-2100453)</span>
               </a>
             </div>
           </div>

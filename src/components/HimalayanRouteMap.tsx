@@ -340,16 +340,16 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
 
   const currentRoute = HIMALAYAN_ROUTES.find(r => r.id === activeRouteId) || HIMALAYAN_ROUTES[0];
 
-  // Tile layer providers
+  // Tile layer providers (high-reliability, keyless basemaps)
   const tileUrls = {
-    dark: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-    topo: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+    dark: 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    topo: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
     satellite: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
   };
 
   const tileAttributions = {
-    dark: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap',
-    topo: '&copy; OpenTopoMap contributors &copy; OpenStreetMap',
+    dark: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+    topo: 'Tiles &copy; Esri &mdash; Source: USGS, Esri, TANA, DeLorme',
     satellite: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye'
   };
 
@@ -398,8 +398,7 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
 
     const tileLayer = L.tileLayer(tileUrls[mapStyle], {
       attribution: tileAttributions[mapStyle],
-      maxZoom: 16,
-      subdomains: mapStyle === 'topo' ? ['a', 'b', 'c'] : 'abcd'
+      maxZoom: 16
     });
 
     tileLayer.addTo(map);
@@ -567,30 +566,30 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
   };
 
   return (
-    <section id="himalayan-route-map" className="py-20 bg-[#0a0a0d] text-white border-y border-white/10 font-sans relative">
+    <section id="himalayan-route-map" className="py-20 bg-[#f8f9fa] text-slate-900 border-y border-slate-200 font-sans relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#e06d2d]/10 border border-[#e06d2d]/30 rounded-sm text-[#e06d2d] font-mono text-xs uppercase tracking-widest font-semibold mb-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#e06d2d]/10 border border-[#e06d2d]/30 rounded-sm text-[#e06d2d] font-mono text-xs uppercase tracking-widest font-bold mb-2">
               <Route className="w-3.5 h-3.5" />
               INTERACTIVE HIMALAYAN EXPEDITION CARTOGRAPHY
             </div>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white">
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-slate-900">
               EXPLORE THE HIGH PASSES & CANYON ROUTES
             </h2>
-            <p className="mt-1 text-neutral-400 text-sm sm:text-base max-w-2xl">
+            <p className="mt-1 text-slate-600 text-sm sm:text-base max-w-2xl">
               Visualize elevation ascents, mountain pass waypoints, and remote checkpoints across Upper Mustang, Kali Gandaki Gorge, and Annapurna.
             </p>
           </div>
 
           {/* Route Category Filters */}
-          <div className="flex items-center gap-2 bg-[#14141a] p-1.5 rounded-sm border border-white/10 shrink-0 font-mono text-xs">
+          <div className="flex items-center gap-2 bg-slate-100 p-1.5 rounded-sm border border-slate-200 shrink-0 font-mono text-xs">
             <button
               onClick={() => setActiveFilter('all')}
               className={`px-3 py-1.5 rounded-sm transition-all cursor-pointer ${
-                activeFilter === 'all' ? 'bg-[#e06d2d] text-black font-bold' : 'text-neutral-400 hover:text-white'
+                activeFilter === 'all' ? 'bg-[#e06d2d] text-white font-bold shadow-xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               ALL ROUTES
@@ -598,7 +597,7 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
             <button
               onClick={() => setActiveFilter('motorcycle')}
               className={`px-3 py-1.5 rounded-sm transition-all cursor-pointer ${
-                activeFilter === 'motorcycle' ? 'bg-[#e06d2d] text-black font-bold' : 'text-neutral-400 hover:text-white'
+                activeFilter === 'motorcycle' ? 'bg-[#e06d2d] text-white font-bold shadow-xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               MOTO TOURS
@@ -606,7 +605,7 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
             <button
               onClick={() => setActiveFilter('mtb')}
               className={`px-3 py-1.5 rounded-sm transition-all cursor-pointer ${
-                activeFilter === 'mtb' ? 'bg-[#22c55e] text-black font-bold' : 'text-neutral-400 hover:text-white'
+                activeFilter === 'mtb' ? 'bg-emerald-600 text-white font-bold shadow-xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               MTB GRAVITY
@@ -628,8 +627,8 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                 }}
                 className={`p-4 rounded-sm border text-left transition-all relative overflow-hidden cursor-pointer flex flex-col justify-between ${
                   isActive
-                    ? 'bg-[#181822] border-[#e06d2d] shadow-lg shadow-[#e06d2d]/10'
-                    : 'bg-[#121217] border-white/10 hover:border-white/20 hover:bg-[#16161d]'
+                    ? 'bg-white border-[#e06d2d] shadow-md'
+                    : 'bg-white border-slate-200 hover:border-slate-300 hover:shadow-xs'
                 }`}
               >
                 {isActive && (
@@ -640,30 +639,30 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                     <span 
                       className="px-2 py-0.5 rounded-xs text-[10px] font-mono uppercase font-bold"
                       style={{ 
-                        backgroundColor: `${route.color}20`, 
+                        backgroundColor: `${route.color}15`, 
                         color: route.color,
-                        border: `1px solid ${route.color}40`
+                        border: `1px solid ${route.color}30`
                       }}
                     >
                       {route.category === 'mtb' ? 'MTB GRAVITY' : 'MOTO EXPEDITION'}
                     </span>
-                    <span className="text-xs font-mono text-neutral-400">{route.days}</span>
+                    <span className="text-xs font-mono text-slate-500">{route.days}</span>
                   </div>
 
-                  <h3 className="font-heading font-bold text-lg uppercase text-white leading-tight">
+                  <h3 className="font-heading font-bold text-lg uppercase text-slate-900 leading-tight">
                     {route.shortName}
                   </h3>
-                  <p className="text-neutral-400 text-xs line-clamp-2 mt-1 font-sans">
+                  <p className="text-slate-600 text-xs line-clamp-2 mt-1 font-sans">
                     {route.description}
                   </p>
                 </div>
 
-                <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-between font-mono text-xs">
-                  <div className="flex items-center gap-1 text-neutral-300">
+                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between font-mono text-xs">
+                  <div className="flex items-center gap-1 text-slate-700">
                     <Navigation className="w-3.5 h-3.5 text-[#e06d2d]" />
                     <span>{route.distanceKm} KM</span>
                   </div>
-                  <div className="flex items-center gap-1 text-amber-400 font-bold">
+                  <div className="flex items-center gap-1 text-amber-600 font-bold">
                     <Mountain className="w-3.5 h-3.5" />
                     <span>MAX {route.maxAltitudeM}M</span>
                   </div>
@@ -676,14 +675,14 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
         {/* Main Cartography Stage Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           
-          {/* Leaflet Map Interactive Container (7 cols or 8 cols) */}
-          <div className="lg:col-span-8 bg-[#121217] border border-white/10 rounded-sm overflow-hidden relative shadow-2xl flex flex-col">
+          {/* Leaflet Map Interactive Container */}
+          <div className="lg:col-span-8 bg-white border border-slate-200 rounded-sm overflow-hidden relative shadow-sm flex flex-col">
             
             {/* Map Top Bar Controls Overlay */}
-            <div className="bg-[#14141a] px-4 py-3 border-b border-white/10 flex flex-wrap items-center justify-between gap-3 z-10">
+            <div className="bg-slate-100 px-4 py-3 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 z-10">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: currentRoute.color }} />
-                <span className="font-heading font-bold uppercase text-sm tracking-wide text-white">
+                <span className="font-heading font-bold uppercase text-sm tracking-wide text-slate-900">
                   {currentRoute.name}
                 </span>
               </div>
@@ -691,11 +690,11 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
               {/* Map Layer Switchers + Utility Buttons */}
               <div className="flex items-center gap-2 text-xs font-mono">
                 {/* Tile Selector */}
-                <div className="bg-black/60 p-1 rounded-sm border border-white/10 flex items-center gap-1">
+                <div className="bg-white p-1 rounded-sm border border-slate-200 flex items-center gap-1 shadow-xs">
                   <button
                     onClick={() => setMapStyle('dark')}
                     className={`px-2 py-0.5 rounded-xs transition-colors cursor-pointer ${
-                      mapStyle === 'dark' ? 'bg-white/20 text-white font-bold' : 'text-neutral-400 hover:text-white'
+                      mapStyle === 'dark' ? 'bg-slate-800 text-white font-bold' : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
                     Dark
@@ -703,7 +702,7 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                   <button
                     onClick={() => setMapStyle('topo')}
                     className={`px-2 py-0.5 rounded-xs transition-colors cursor-pointer ${
-                      mapStyle === 'topo' ? 'bg-[#e06d2d] text-black font-bold' : 'text-neutral-400 hover:text-white'
+                      mapStyle === 'topo' ? 'bg-[#e06d2d] text-white font-bold' : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
                     Topo
@@ -711,7 +710,7 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                   <button
                     onClick={() => setMapStyle('satellite')}
                     className={`px-2 py-0.5 rounded-xs transition-colors cursor-pointer ${
-                      mapStyle === 'satellite' ? 'bg-[#38bdf8] text-black font-bold' : 'text-neutral-400 hover:text-white'
+                      mapStyle === 'satellite' ? 'bg-sky-600 text-white font-bold' : 'text-slate-600 hover:text-slate-900'
                     }`}
                   >
                     Satellite
@@ -723,8 +722,8 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                   onClick={() => setShowPassesOnly(!showPassesOnly)}
                   className={`px-2.5 py-1 rounded-sm border transition-colors cursor-pointer flex items-center gap-1 ${
                     showPassesOnly 
-                      ? 'bg-amber-500/20 border-amber-500/50 text-amber-300' 
-                      : 'bg-black/40 border-white/10 text-neutral-400 hover:text-white'
+                      ? 'bg-amber-100 border-amber-300 text-amber-900 font-bold' 
+                      : 'bg-white border-slate-200 text-slate-700 hover:text-slate-900'
                   }`}
                   title="Filter Mountain Passes Only"
                 >
@@ -735,7 +734,7 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                 {/* Reset Center View */}
                 <button
                   onClick={handleFitActiveRoute}
-                  className="bg-black/40 hover:bg-white/10 border border-white/10 p-1 rounded-sm text-neutral-400 hover:text-white transition-colors cursor-pointer"
+                  className="bg-white hover:bg-slate-100 border border-slate-200 p-1 rounded-sm text-slate-700 hover:text-slate-900 transition-colors cursor-pointer shadow-xs"
                   title="Fit Route to Screen"
                 >
                   <Compass className="w-3.5 h-3.5" />
@@ -746,11 +745,11 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
             {/* Actual Map Canvas Area */}
             <div 
               ref={mapContainerRef} 
-              className="w-full h-[420px] sm:h-[500px] lg:h-[540px] relative z-0 bg-[#09090c]"
+              className="w-full h-[420px] sm:h-[500px] lg:h-[540px] relative z-0 bg-slate-100"
             />
 
             {/* Map Legend Footer */}
-            <div className="bg-[#14141a] px-4 py-2.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-neutral-400">
+            <div className="bg-slate-50 px-4 py-2.5 border-t border-slate-200 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-600">
               <div className="flex flex-wrap items-center gap-4">
                 <div className="flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-xs bg-[#f59e0b]" />
@@ -761,7 +760,7 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                   <span>Base Camp / Checkpoint</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#38bdf8]" />
+                  <span className="w-2.5 h-2.5 rounded-full bg-sky-500" />
                   <span>Night Stopover</span>
                 </div>
                 <div className="flex items-center gap-1.5">
@@ -769,7 +768,7 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                 </div>
               </div>
 
-              <div className="text-[11px] text-neutral-500">
+              <div className="text-[11px] text-slate-500">
                 Click pins or list items to zoom & inspect altitude
               </div>
             </div>
@@ -780,45 +779,45 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
             
             {/* Selected Waypoint Dossier Card */}
             {selectedWaypoint ? (
-              <div className="bg-[#14141a] border border-white/10 rounded-sm p-5 relative overflow-hidden">
-                <div className="flex items-center justify-between gap-2 pb-3 border-b border-white/10">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-[#e06d2d] flex items-center gap-1.5">
+              <div className="bg-white border border-slate-200 rounded-sm p-5 relative overflow-hidden shadow-sm">
+                <div className="flex items-center justify-between gap-2 pb-3 border-b border-slate-100">
+                  <span className="text-[11px] font-mono uppercase tracking-wider text-[#e06d2d] flex items-center gap-1.5 font-bold">
                     <Flag className="w-3.5 h-3.5" />
                     {selectedWaypoint.category === 'pass' ? 'HIGH MOUNTAIN PASS' : 'EXPEDITION CHECKPOINT'}
                   </span>
                   {selectedWaypoint.dayNumber && (
-                    <span className="bg-white/10 text-white font-mono text-[10px] px-2 py-0.5 rounded-sm">
+                    <span className="bg-slate-100 text-slate-800 font-mono text-[10px] px-2 py-0.5 rounded-sm font-semibold border border-slate-200">
                       DAY {selectedWaypoint.dayNumber}
                     </span>
                   )}
                 </div>
 
                 <div className="mt-3">
-                  <h3 className="font-heading font-black text-2xl uppercase text-white tracking-wide">
+                  <h3 className="font-heading font-black text-2xl uppercase text-slate-900 tracking-wide">
                     {selectedWaypoint.name}
                   </h3>
                   
                   <div className="flex items-center gap-3 mt-1.5 font-mono">
-                    <div className="text-amber-400 font-bold text-lg flex items-center gap-1">
+                    <div className="text-amber-600 font-bold text-lg flex items-center gap-1">
                       <Mountain className="w-4 h-4" />
                       <span>{selectedWaypoint.altitudeM}m</span>
                     </div>
-                    <span className="text-neutral-500 text-xs">
+                    <span className="text-slate-500 text-xs">
                       ({selectedWaypoint.altitudeFt.toLocaleString()} ft)
                     </span>
                   </div>
 
-                  <p className="text-neutral-300 text-xs leading-relaxed mt-3 font-sans">
+                  <p className="text-slate-600 text-xs leading-relaxed mt-3 font-sans">
                     {selectedWaypoint.description}
                   </p>
 
-                  <div className="mt-4 pt-3 border-t border-white/5 space-y-2 text-xs font-mono">
+                  <div className="mt-4 pt-3 border-t border-slate-100 space-y-2 text-xs font-mono">
                     <div className="flex items-start justify-between gap-2">
-                      <span className="text-neutral-500">Terrain:</span>
-                      <span className="text-neutral-200 text-right">{selectedWaypoint.terrainType}</span>
+                      <span className="text-slate-500">Terrain:</span>
+                      <span className="text-slate-800 text-right">{selectedWaypoint.terrainType}</span>
                     </div>
                     <div className="flex items-start justify-between gap-2">
-                      <span className="text-neutral-500">Highlight:</span>
+                      <span className="text-slate-500">Highlight:</span>
                       <span className="text-[#e06d2d] text-right font-semibold">{selectedWaypoint.mustSee}</span>
                     </div>
                   </div>
@@ -831,7 +830,7 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                         onOpenBooking(slug);
                       }
                     }}
-                    className="w-full mt-5 bg-[#e06d2d] hover:bg-[#ff7b36] text-black font-heading font-black text-xs py-2.5 uppercase tracking-wider rounded-sm flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+                    className="w-full mt-5 bg-[#e06d2d] hover:bg-[#d45e1d] text-white font-heading font-black text-xs py-2.5 uppercase tracking-wider rounded-sm flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-xs"
                   >
                     <span>BOOK THIS EXPEDITION ROUTE</span>
                     <ArrowUpRight className="w-4 h-4" />
@@ -841,12 +840,12 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
             ) : null}
 
             {/* Route Waypoints Sequential List */}
-            <div className="bg-[#14141a] border border-white/10 rounded-sm p-4">
-              <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
-                <span className="font-heading font-bold text-sm uppercase text-neutral-300 tracking-wider">
+            <div className="bg-white border border-slate-200 rounded-sm p-4 shadow-sm">
+              <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
+                <span className="font-heading font-bold text-sm uppercase text-slate-800 tracking-wider">
                   ROUTE STOPOVERS ({currentRoute.waypoints.length})
                 </span>
-                <span className="text-[11px] font-mono text-neutral-500">Click to fly</span>
+                <span className="text-[11px] font-mono text-slate-500">Click to fly</span>
               </div>
 
               <div className="space-y-1.5 max-h-[260px] overflow-y-auto pr-1">
@@ -860,25 +859,25 @@ export const HimalayanRouteMap: React.FC<HimalayanRouteMapProps> = ({
                       onClick={() => handleWaypointClick(wp)}
                       className={`w-full p-2.5 rounded-sm text-left transition-all flex items-center justify-between text-xs font-mono cursor-pointer ${
                         isSelected 
-                          ? 'bg-[#1f1f2b] border border-[#e06d2d] text-white' 
-                          : 'bg-black/30 hover:bg-white/5 text-neutral-300 border border-transparent'
+                          ? 'bg-slate-100 border border-[#e06d2d] text-slate-900 font-semibold' 
+                          : 'bg-slate-50 hover:bg-slate-100 text-slate-700 border border-transparent'
                       }`}
                     >
                       <div className="flex items-center gap-2 truncate pr-2">
                         <span className={`w-5 h-5 rounded-xs flex items-center justify-center text-[10px] font-bold shrink-0 ${
                           isPass 
-                            ? 'bg-amber-500 text-black' 
-                            : 'bg-white/10 text-neutral-300'
+                            ? 'bg-amber-500 text-white' 
+                            : 'bg-slate-200 text-slate-700'
                         }`}>
                           {isPass ? '▲' : wp.dayNumber || idx + 1}
                         </span>
-                        <span className="truncate font-sans font-semibold text-xs">
+                        <span className="truncate font-sans font-medium text-xs">
                           {wp.name}
                         </span>
                       </div>
 
                       <div className="text-right shrink-0">
-                        <span className={isPass ? 'text-amber-400 font-bold' : 'text-neutral-400'}>
+                        <span className={isPass ? 'text-amber-600 font-bold' : 'text-slate-500'}>
                           {wp.altitudeM}m
                         </span>
                       </div>

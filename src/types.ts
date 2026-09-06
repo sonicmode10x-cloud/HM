@@ -1,6 +1,14 @@
 export type TourCategory = 'motorcycle' | 'mtb' | 'e-mtb';
 
-export type DifficultyLevel = 'Moderate' | 'Challenging' | 'Demanding' | 'Extreme' | 'All Levels';
+export type DifficultyLevel = 
+  | 'Beginner–Intermediate'
+  | 'Intermediate'
+  | 'Intermediate–Challenging'
+  | 'Challenging'
+  | 'Moderate'
+  | 'Demanding'
+  | 'Extreme'
+  | 'All Levels';
 
 export interface DayItinerary {
   day: number;
@@ -31,18 +39,31 @@ export interface TourReview {
   bike: string;
 }
 
+export interface DestinationActivity {
+  title: string;
+  location: string;
+  category: 'Sightseeing' | 'Culture & Heritage' | 'Adventure & Outdoors' | 'Food & Local Life' | 'Relaxation';
+  description: string;
+  iconName?: string;
+}
+
 export interface Expedition {
   id: string;
   slug: string;
+  packageNumber?: string;
   title: string;
   category: TourCategory;
   isFlagship?: boolean;
+  flagBadge?: string;
   tagline: string;
   durationDays: number;
   durationLabel: string;
+  priceUsd: number;
+  price: string;
   difficulty: DifficultyLevel;
   startingPricePlaceholder: string;
   currency: string;
+  routeSummary?: string;
   bestSeason: string;
   maxAltitude: string;
   terrain: string;
@@ -65,6 +86,7 @@ export interface Expedition {
   seoDescription: string;
   seoKeywords: string[];
   routeMapDescription: string;
+  thingsToDo?: DestinationActivity[];
 }
 
 export interface FleetBike {

@@ -1,0 +1,251 @@
+<svg viewBox="0 0 800 650" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Alpine Ridge Gradients -->
+    <linearGradient id="hmPeakDark" x1="400" y1="90" x2="400" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#0B3056"/>
+      <stop offset="50%" stopColor="#07203E"/>
+      <stop offset="100%" stopColor="#041224"/>
+    </linearGradient>
+
+    <linearGradient id="hmGlacierCyan" x1="400" y1="90" x2="400" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#E0F2FE"/>
+      <stop offset="40%" stopColor="#38BDF8"/>
+      <stop offset="100%" stopColor="#0284C7"/>
+    </linearGradient>
+
+    <linearGradient id="hmRoostSpray" x1="580" y1="320" x2="740" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stopColor="#4C1D95"/>
+      <stop offset="45%" stopColor="#6D28D9"/>
+      <stop offset="85%" stopColor="#7C3AED"/>
+      <stop offset="100%" stopColor="#3B0764"/>
+    </linearGradient>
+
+    <filter id="brushRoughness" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <!-- ========================================== -->
+  <!-- 1. HIMALAYAN MOUNTAIN RANGES (TOP)         -->
+  <!-- ========================================== -->
+  <g id="mountain-peaks" transform="translate(0, 10)">
+    <!-- Left Distant Peak -->
+    <polygon points="210,260 280,165 350,260" fill="#0B2545"/>
+    <polygon points="280,165 300,205 260,205" fill="#E0F2FE"/>
+    <polygon points="280,165 300,205 350,260 280,260" fill="#0369A1" opacity="0.6"/>
+
+    <!-- Right Distant Peak -->
+    <polygon points="450,260 520,165 590,260" fill="#0B2545"/>
+    <polygon points="520,165 540,205 500,205" fill="#E0F2FE"/>
+    <polygon points="520,165 540,205 590,260 520,260" fill="#0369A1" opacity="0.6"/>
+
+    <!-- Mid-Left Ridge -->
+    <polygon points="250,265 330,120 420,265" fill="#08284C"/>
+    <!-- Snow & Ice Arête Left -->
+    <polygon points="330,120 360,175 342,170 330,195 315,175 295,185" fill="#FFFFFF"/>
+    <polygon points="330,120 360,175 420,265 330,265" fill="url(#hmGlacierCyan)" opacity="0.85"/>
+    <path d="M 330 120 L 336 160 L 325 195 L 334 235 L 328 265" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Mid-Right Ridge -->
+    <polygon points="380,265 470,120 550,265" fill="#08284C"/>
+    <!-- Snow & Ice Arête Right -->
+    <polygon points="470,120 498,175 482,170 470,195 452,175 435,185" fill="#FFFFFF"/>
+    <polygon points="470,120 435,185 380,265 470,265" fill="url(#hmGlacierCyan)" opacity="0.85"/>
+    <path d="M 470 120 L 464 160 L 475 195 L 466 235 L 472 265" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Central Majestic Summit Peak -->
+    <polygon points="300,270 400,75 500,270" fill="url(#hmPeakDark)"/>
+    <!-- Central Glaciated Cap -->
+    <polygon points="400,75 440,148 420,140 408,172 390,144 362,154" fill="#FFFFFF"/>
+    <!-- Shadow & Highlights -->
+    <polygon points="400,75 362,154 374,190 392,168 408,172" fill="#F0F9FF"/>
+    <polygon points="400,75 440,148 500,270 400,270" fill="url(#hmGlacierCyan)" opacity="0.7"/>
+
+    <!-- Spine Crest -->
+    <path d="M 400 75 L 408 122 L 392 162 L 406 215 L 398 270" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 400 75 L 432 148 L 458 220" stroke="#7DD3FC" stroke-width="4" opacity="0.9"/>
+    <path d="M 400 75 L 370 148 L 344 220" stroke="#BAE6FD" stroke-width="4" opacity="0.9"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 2. "HiMALAYAN" TEXT (NAVY + CYAN 'i')      -->
+  <!-- ========================================== -->
+  <g id="himalayan-title" transform="translate(0, 20)">
+    <!-- White outer background contour for supreme readability on any canvas -->
+    <text
+      x="400"
+      y="300"
+      text-anchor="middle"
+      font-family="'Impact', 'Arial Black', sans-serif"
+      font-weight="900"
+      font-size="108"
+      fill="#FFFFFF"
+      stroke="#FFFFFF"
+      stroke-width="18"
+      stroke-linejoin="round"
+      letter-spacing="4"
+    >
+      H<tspan fill="#FFFFFF" stroke="#FFFFFF">i</tspan>MALAYAN
+    </text>
+
+    <!-- Navy Blue Letters with Cyan 'i' -->
+    <text
+      x="400"
+      y="300"
+      text-anchor="middle"
+      font-family="'Impact', 'Arial Black', sans-serif"
+      font-weight="900"
+      font-size="108"
+      fill="#0B2341"
+      letter-spacing="4"
+    >
+      H<tspan fill="#00AEEF">i</tspan>MALAYAN
+    </text>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 3. "MONSTER" MULTICOLOR LETTERS            -->
+  <!-- ========================================== -->
+  <g id="monster-letters" transform="translate(4, 25)">
+    <!-- White outline silhouette -->
+    <g stroke="#FFFFFF" stroke-width="16" stroke-linejoin="round" fill="#FFFFFF">
+      <!-- M -->
+      <path d="M 100 325 L 134 325 L 160 404 L 186 325 L 220 325 L 220 445 L 186 445 L 186 380 L 168 436 L 152 436 L 134 380 L 134 445 L 100 445 Z"/>
+      <!-- O -->
+      <path d="M 235 346 L 264 325 L 308 325 L 337 346 L 337 424 L 308 445 L 264 445 L 235 424 Z"/>
+      <!-- N -->
+      <path d="M 354 325 L 388 325 L 428 402 L 428 325 L 462 325 L 462 445 L 428 445 L 388 368 L 388 445 L 354 445 Z"/>
+      <!-- S -->
+      <path d="M 480 410 L 512 414 C 513 425 524 430 538 430 C 552 430 561 422 561 413 C 561 403 551 399 533 393 C 499 383 483 371 483 349 C 483 330 505 321 535 321 C 566 321 587 335 588 358 L 556 361 C 555 351 547 346 535 346 C 523 346 515 351 515 359 C 515 368 523 372 540 377 C 574 388 592 400 592 423 C 592 445 571 455 538 455 C 502 455 482 437 480 410 Z"/>
+      <!-- T -->
+      <path d="M 598 325 L 678 325 L 678 356 L 654 356 L 654 445 L 622 445 L 622 356 L 598 356 Z"/>
+      <!-- E -->
+      <path d="M 660 325 L 712 325 L 712 355 L 691 355 L 691 371 L 709 371 L 709 398 L 691 398 L 691 415 L 712 415 L 712 445 L 660 445 Z"/>
+      <!-- R -->
+      <path d="M 718 325 L 766 325 C 784 325 796 335 796 353 C 796 368 786 379 770 383 L 798 445 L 761 445 L 738 390 L 735 390 L 735 445 L 718 445 Z"/>
+    </g>
+
+    <!-- M - Crimson / Poppy Red -->
+    <path
+      d="M 100 325 L 134 325 L 160 404 L 186 325 L 220 325 L 220 445 L 186 445 L 186 380 L 168 436 L 152 436 L 134 380 L 134 445 L 100 445 Z"
+      fill="#E52320"
+    />
+
+    <!-- O - Vivid Tangerine Orange (Hexagonal Beveled Cut) -->
+    <path
+      d="M 235 346 L 264 325 L 308 325 L 337 346 L 337 424 L 308 445 L 264 445 L 235 424 Z M 268 356 L 268 414 L 286 425 L 304 414 L 304 356 L 286 345 Z"
+      fill="#EA580C"
+    />
+
+    <!-- N - Golden Amber / Mustard Yellow -->
+    <path
+      d="M 354 325 L 388 325 L 428 402 L 428 325 L 462 325 L 462 445 L 428 445 L 388 368 L 388 445 L 354 445 Z"
+      fill="#F59E0B"
+    />
+
+    <!-- S - Lime / Grass Green -->
+    <path
+      d="M 480 410 L 512 414 C 513 425 524 430 538 430 C 552 430 561 422 561 413 C 561 403 551 399 533 393 C 499 383 483 371 483 349 C 483 330 505 321 535 321 C 566 321 587 335 588 358 L 556 361 C 555 351 547 346 535 346 C 523 346 515 351 515 359 C 515 368 523 372 540 377 C 574 388 592 400 592 423 C 592 445 571 455 538 455 C 502 455 482 437 480 410 Z"
+      fill="#65A30D"
+    />
+
+    <!-- T - Turquoise / Sky Blue -->
+    <path
+      d="M 598 325 L 678 325 L 678 356 L 654 356 L 654 445 L 622 445 L 622 356 L 598 356 Z"
+      fill="#0284C7"
+    />
+
+    <!-- E - Royal / Cobalt Blue -->
+    <path
+      d="M 660 325 L 712 325 L 712 355 L 691 355 L 691 371 L 709 371 L 709 398 L 691 398 L 691 415 L 712 415 L 712 445 L 660 445 Z"
+      fill="#2563EB"
+    />
+
+    <!-- R - Vibrant Royal Purple with Dirt Bike Fork Interlock -->
+    <path
+      d="M 718 325 L 766 325 C 784 325 796 335 796 353 C 796 368 786 379 770 383 L 798 445 L 761 445 L 738 390 L 735 390 L 735 445 L 718 445 Z M 735 348 L 735 372 L 760 372 C 768 372 775 368 775 360 C 775 352 768 348 760 348 Z"
+      fill="#7C3AED"
+    />
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 4. ENDURO DIRT BIKE & PURPLE ROOST SPRAY   -->
+  <!-- ========================================== -->
+  <g id="dirt-bike-roost" transform="translate(178, 30)">
+    <!-- High velocity dirt / roost waves -->
+    <g fill="url(#hmRoostSpray)">
+      <path d="M 560 400 Q 640 445 710 455 Q 630 425 560 400" opacity="0.95"/>
+      <path d="M 570 370 Q 675 400 735 395 Q 640 375 570 370" opacity="0.95"/>
+      <path d="M 585 340 Q 695 350 745 320 Q 650 335 585 340" opacity="0.85"/>
+      
+      <!-- Gravel and Dirt Spray Particles -->
+      <circle cx="645" cy="425" r="6.5"/>
+      <circle cx="682" cy="442" r="5.2"/>
+      <circle cx="718" cy="455" r="3.8"/>
+      <circle cx="660" cy="390" r="7"/>
+      <circle cx="700" cy="405" r="5.5"/>
+      <circle cx="738" cy="385" r="4.2"/>
+      <circle cx="640" cy="355" r="5.8"/>
+      <circle cx="688" cy="350" r="4.5"/>
+      <circle cx="722" cy="330" r="3.5"/>
+      <circle cx="615" cy="442" r="5.2"/>
+      <circle cx="635" cy="462" r="4"/>
+    </g>
+
+    <!-- White Underlay for Enduro Wheel -->
+    <circle cx="580" cy="380" r="38" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="8"/>
+
+    <!-- Purple Knobby Dirt Bike Wheel (Tire) -->
+    <circle cx="580" cy="380" r="36" stroke="#3B0764" stroke-width="13" stroke-dasharray="8 4" fill="#09090B"/>
+    <circle cx="580" cy="380" r="21" stroke="#7C3AED" stroke-width="4.5" fill="#18181B"/>
+    <circle cx="580" cy="380" r="9" fill="#A855F7"/>
+
+    <!-- Spokes -->
+    <line x1="580" y1="359" x2="580" y2="401" stroke="#E2E8F0" stroke-width="2.2"/>
+    <line x1="559" y1="380" x2="601" y2="380" stroke="#E2E8F0" stroke-width="2.2"/>
+    <line x1="565" y1="365" x2="595" y2="395" stroke="#E2E8F0" stroke-width="2.2"/>
+    <line x1="565" y1="395" x2="595" y2="365" stroke="#E2E8F0" stroke-width="2.2"/>
+
+    <!-- Enduro Motorcycle Inverted Front Fork & Headlight Cowl -->
+    <path d="M 580 380 L 540 335 L 505 330 L 535 298 L 570 312 Z" fill="#6D28D9"/>
+    <path d="M 540 335 L 580 380" stroke="#DDD6FE" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 505 330 L 482 280" stroke="#7C3AED" stroke-width="9" stroke-linecap="round"/>
+    <path d="M 482 280 L 454 296" stroke="#E2E8F0" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Front Mudguard Fender -->
+    <path d="M 490 274 L 528 266 L 548 290 L 505 296 Z" fill="#7C3AED"/>
+    <path d="M 528 266 L 564 270 L 548 284 Z" fill="#9333EA"/>
+    <polygon points="495,276 510,272 505,286" fill="#FBBF24"/>
+
+    <!-- Handlebars and Red Handguards -->
+    <line x1="492" y1="262" x2="548" y2="254" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="492" cy="262" r="4.5" fill="#EF4444"/>
+    <circle cx="548" cy="254" r="4.5" fill="#EF4444"/>
+  </g>
+
+  <!-- ========================================== -->
+  <!-- 5. "EXTREME TOURS" SUBTITLE & ARROWS       -->
+  <!-- ========================================== -->
+  <g id="extreme-tours-banner" transform="translate(0, 70)">
+    <!-- Left Red Tapered Arrow Wedge -->
+    <polygon points="180,455 280,449 280,461" fill="#E52320"/>
+
+    <!-- Centered Subtitle with crisp tracking -->
+    <text
+      x="400"
+      y="467"
+      text-anchor="middle"
+      font-family="'Arial Black', 'Impact', sans-serif"
+      font-weight="900"
+      font-size="34"
+      fill="#0B2341"
+      letter-spacing="11"
+    >
+      EXTREME TOURS
+    </text>
+
+    <!-- Right Peacock Cyan Tapered Arrow Wedge -->
+    <polygon points="620,455 520,449 520,461" fill="#00AEEF"/>
+  </g>
+</svg>

@@ -94,7 +94,7 @@ export const UpperMustangFeature: React.FC<UpperMustangFeatureProps> = ({
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <button
               onClick={onExploreMustang}
-              className="bg-[#e06d2d] hover:bg-[#eb7a3b] text-black font-heading font-black text-lg tracking-wider px-8 py-4 rounded-sm uppercase transition-colors flex items-center justify-center gap-3 cursor-pointer shadow-xl"
+              className="bg-[#e06d2d] hover:bg-[#d45e1d] text-white font-heading font-black text-lg tracking-wider px-8 py-4 rounded-sm uppercase transition-colors flex items-center justify-center gap-3 cursor-pointer shadow-xl"
             >
               <span>EXPLORE UPPER MUSTANG</span>
               <ArrowRight className="w-5 h-5" />
@@ -102,7 +102,7 @@ export const UpperMustangFeature: React.FC<UpperMustangFeatureProps> = ({
 
             <button
               onClick={onOpenBooking}
-              className="bg-white/10 hover:bg-white/20 text-white font-heading font-bold text-lg tracking-wider px-8 py-4 rounded-sm uppercase border border-white/20 transition-colors"
+              className="bg-white/10 hover:bg-white/20 text-white font-heading font-bold text-lg tracking-wider px-8 py-4 rounded-sm uppercase border border-white/30 transition-colors cursor-pointer"
             >
               INQUIRE EXPEDITION
             </button>

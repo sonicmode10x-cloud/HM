@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import defaultLogoSvg from '../assets/himalayan-monster-logo.svg';
 
 export interface LogoConfig {
   sourceType: 'default-vector' | 'custom-image' | 'crest-icon';
@@ -11,9 +12,9 @@ export interface LogoConfig {
 }
 
 export const DEFAULT_LOGO_CONFIG: LogoConfig = {
-  sourceType: 'default-vector',
-  customImageUrl: null,
-  customImageAlt: 'Himalayan Monster Extreme Tours Pokhara',
+  sourceType: 'custom-image',
+  customImageUrl: defaultLogoSvg,
+  customImageAlt: 'Himalayan Monster Extreme Tours Pokhara Nepal',
   navbarScale: 2.0, // Increased by 100% (2x)
   footerScale: 2.0, // Increased by 100% (2x)
   bannerScale: 2.0, // Increased by 100% (2x)

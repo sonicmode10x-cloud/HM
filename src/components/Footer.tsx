@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, MessageCircle, Instagram, Facebook, Youtube, Compass, ArrowUpRight } from 'lucide-react';
+import { HimalayanMonsterLogo } from './HimalayanMonsterLogo';
 import { Analytics } from '../lib/analytics';
 
 interface FooterProps {
@@ -23,40 +24,40 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
   ];
 
   return (
-    <footer className="bg-[#08080a] text-white border-t border-white/10 pt-16 pb-12 font-sans">
+    <footer className="bg-slate-50 text-slate-900 border-t border-slate-200 pt-16 pb-12 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main 4-Column Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-16">
           {/* Col 1: Brand & Tagline */}
           <div className="lg:col-span-4 space-y-4">
-            <h3 className="font-heading text-2xl font-black tracking-wider text-white uppercase">
-              HIMALAYAN <span className="text-[#e06d2d]">MONSTER</span>
-            </h3>
+            <div className="mb-4">
+              <HimalayanMonsterLogo variant="compact" />
+            </div>
 
             <p className="font-heading text-lg font-bold tracking-widest text-[#e06d2d] uppercase">
               TWO WHEELS. WILD NEPAL.
             </p>
 
-            <p className="text-sm text-neutral-400 leading-relaxed max-w-sm">
+            <p className="text-sm text-slate-600 leading-relaxed max-w-sm">
               Pokhara-based two-wheel adventure company specializing in motorcycle tours, MTB expeditions, E-MTB experiences, and high-altitude bike rentals across Nepal.
             </p>
 
             {/* Social Channels */}
             <div className="pt-2 flex items-center gap-3">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/himalayanmonsternp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-sm bg-white/5 hover:bg-[#e06d2d] text-neutral-300 hover:text-black flex items-center justify-center transition-colors border border-white/10"
+                className="w-9 h-9 rounded-sm bg-white hover:bg-[#e06d2d] text-slate-700 hover:text-white flex items-center justify-center transition-colors border border-slate-200 shadow-xs"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
               </a>
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=61593440248091"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-sm bg-white/5 hover:bg-[#e06d2d] text-neutral-300 hover:text-black flex items-center justify-center transition-colors border border-white/10"
+                className="w-9 h-9 rounded-sm bg-white hover:bg-[#e06d2d] text-slate-700 hover:text-white flex items-center justify-center transition-colors border border-slate-200 shadow-xs"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -65,19 +66,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
                 href="https://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-sm bg-white/5 hover:bg-[#e06d2d] text-neutral-300 hover:text-black flex items-center justify-center transition-colors border border-white/10"
+                className="w-9 h-9 rounded-sm bg-white hover:bg-[#e06d2d] text-slate-700 hover:text-white flex items-center justify-center transition-colors border border-slate-200 shadow-xs"
                 aria-label="YouTube"
               >
                 <Youtube className="w-4 h-4" />
-              </a>
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 rounded-sm bg-white/5 hover:bg-[#e06d2d] text-neutral-300 hover:text-black flex items-center justify-center transition-colors border border-white/10 font-heading font-black text-xs"
-                aria-label="TikTok"
-              >
-                TT
               </a>
             </div>
           </div>
@@ -87,29 +79,29 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
             <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-[#e06d2d] mb-4">
               EXPEDITIONS & RIDES
             </h4>
-            <ul className="space-y-2.5 text-sm text-neutral-400">
+            <ul className="space-y-2.5 text-sm text-slate-600 font-medium">
               <li>
-                <button onClick={() => onNavigate('expeditions')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('expeditions')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   All Expeditions
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('motorcycles')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('motorcycles')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   Motorcycle Tours (Himalayan 450)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('mtb')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('mtb')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   MTB & Enduro Expeditions
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('e-mtb')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('e-mtb')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   E-MTB Ridge Experiences
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('rentals')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('rentals')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   Bike & Motorcycle Rentals
                 </button>
               </li>
@@ -121,34 +113,34 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
             <h4 className="font-heading text-sm font-bold uppercase tracking-widest text-[#e06d2d] mb-4">
               COMPANY
             </h4>
-            <ul className="space-y-2.5 text-sm text-neutral-400">
+            <ul className="space-y-2.5 text-sm text-slate-600 font-medium">
               <li>
-                <button onClick={() => onNavigate('about')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('about')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   About Us & Ethos
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('contact')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('contact')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   Contact Base Camp
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('stories')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('stories')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   Adventure Stories (Blog)
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('faq')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('faq')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   Permits & FAQ
                 </button>
               </li>
               <li>
-                <button onClick={() => onNavigate('private')} className="hover:text-white transition-colors cursor-pointer">
+                <button onClick={() => onNavigate('private')} className="hover:text-[#e06d2d] transition-colors cursor-pointer">
                   Private / Custom Tours
                 </button>
               </li>
-              <li className="pt-2 border-t border-white/5">
-                <button onClick={() => onNavigate('admin')} className="text-neutral-500 hover:text-[#e06d2d] transition-colors cursor-pointer flex items-center gap-1.5 font-mono text-xs">
+              <li className="pt-2 border-t border-slate-200">
+                <button onClick={() => onNavigate('admin')} className="text-slate-400 hover:text-[#e06d2d] transition-colors cursor-pointer flex items-center gap-1.5 font-mono text-xs">
                   <span>Base Camp Admin</span>
                 </button>
               </li>
@@ -161,33 +153,33 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
               POKHARA BASE CAMP
             </h4>
 
-            <div className="space-y-3 text-xs sm:text-sm text-neutral-300">
+            <div className="space-y-3 text-xs sm:text-sm text-slate-700">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#e06d2d] shrink-0 mt-0.5" />
                 <span>Lakeside, Pokhara-6, Gandaki Province, Nepal</span>
               </div>
 
               <div className="flex items-center gap-2.5">
-                <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                <MessageCircle className="w-4 h-4 text-emerald-600 shrink-0" />
                 <a
-                  href="https://wa.me/9779800000000?text=Hello%20Himalayan%20Monster"
+                  href="https://wa.me/9779812100453?text=Hello%20Himalayan%20Monster"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => Analytics.trackWhatsAppClick('Footer')}
-                  className="hover:underline font-mono text-emerald-400 font-semibold"
+                  className="hover:underline font-mono text-emerald-600 font-bold"
                 >
-                  WhatsApp: +977 980 000 0000
+                  WhatsApp: +977 981-2100453
                 </a>
               </div>
 
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#e06d2d] shrink-0" />
                 <a
-                  href="tel:+97761460000"
+                  href="tel:+9779812100453"
                   onClick={() => Analytics.trackPhoneClick('Footer')}
-                  className="font-mono hover:text-white transition-colors"
+                  className="font-mono hover:text-[#e06d2d] transition-colors text-slate-700"
                 >
-                  +977 61 460000
+                  +977 981-2100453
                 </a>
               </div>
 
@@ -196,25 +188,25 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
                 <a 
                   href="mailto:ride@himalayanmonster.com" 
                   onClick={() => Analytics.trackEmailClick('Footer')}
-                  className="hover:underline font-mono text-neutral-300"
+                  className="hover:underline font-mono text-slate-700"
                 >
                   ride@himalayanmonster.com
                 </a>
               </div>
             </div>
 
-            <div className="pt-2 text-[11px] font-mono text-neutral-500">
+            <div className="pt-2 text-[11px] font-mono text-slate-500">
               Operating Hours: 07:00 – 20:00 NPT Daily
             </div>
           </div>
         </div>
 
         {/* SEO Landing Pages Directory Grid */}
-        <div className="pt-10 pb-8 border-t border-white/10">
-          <div className="font-mono text-xs text-neutral-400 uppercase tracking-widest mb-4 font-semibold">
+        <div className="pt-10 pb-8 border-t border-slate-200">
+          <div className="font-mono text-xs text-slate-500 uppercase tracking-widest mb-4 font-bold">
             TOP SEO DESTINATIONS & RENTAL ROUTES (NEPAL)
           </div>
-          <div className="flex flex-wrap gap-x-6 gap-y-2.5 text-xs text-neutral-500 font-sans">
+          <div className="flex flex-wrap gap-x-6 gap-y-2.5 text-xs text-slate-600 font-sans">
             {seoLinks.map((link) => (
               <button
                 key={link.slug}
@@ -222,14 +214,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
                 className="hover:text-[#e06d2d] transition-colors text-left cursor-pointer flex items-center gap-1"
               >
                 <span>{link.label}</span>
-                <ArrowUpRight className="w-3 h-3 text-neutral-600" />
+                <ArrowUpRight className="w-3 h-3 text-slate-400" />
               </button>
             ))}
           </div>
         </div>
 
         {/* Bottom Legal & Copyright Bar */}
-        <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 font-mono gap-4">
+        <div className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-mono gap-4">
           <div>
             © {new Date().getFullYear()} Himalayan Monster. All rights reserved.
           </div>

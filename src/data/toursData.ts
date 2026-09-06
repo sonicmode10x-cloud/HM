@@ -1,653 +1,1442 @@
 import { Expedition } from '../types';
+import { DESTINATION_ACTIVITIES_BY_TOUR } from './destinationActivitiesData';
+import tour1Img from '../assets/images/regenerated_image_1788370493452.jpg';
+import tour2Img from '../assets/images/regenerated_image_1788370495617.jpg';
+import tour3Img from '../assets/images/regenerated_image_1788370498054.jpg';
+import tour4Img from '../assets/images/regenerated_image_1788370499760.webp';
+import tour5Img from '../assets/images/regenerated_image_1788370501842.webp';
+import tour6Img from '../assets/images/regenerated_image_1788370503435.jpg';
+import tour7Img from '../assets/images/regenerated_image_1788370504917.webp';
+import tour8Img from '../assets/images/regenerated_image_1788370506761.webp';
 
-export const TOURS_DATA: Expedition[] = [
+const RAW_TOURS_DATA: Expedition[] = [
+  // ==========================================
+  // MOTORCYCLE EXPEDITIONS
+  // ==========================================
+
+  // 01. POKHARA HIMALAYAN DAY RIDE
   {
-    id: 'upper-mustang-motorcycle',
-    slug: 'upper-mustang-motorcycle-tour',
-    title: 'Upper Mustang Himalayan Expedition',
+    id: 'pokhara-himalayan-day-ride',
+    slug: 'pokhara-himalayan-day-ride',
+    packageNumber: '01',
+    title: 'Pokhara Himalayan Day Ride',
     category: 'motorcycle',
-    isFlagship: true,
-    tagline: 'Enter the Forbidden Kingdom on Two Wheels',
-    durationDays: 12,
-    durationLabel: '10–12 DAYS',
-    difficulty: 'Challenging',
-    startingPricePlaceholder: 'Price on request (Inquire for group/private)',
+    isFlagship: false,
+    tagline: 'Ride the Himalayan Foothills',
+    durationDays: 1,
+    durationLabel: '1 DAY',
+    priceUsd: 150,
+    price: '$150 / person',
+    startingPricePlaceholder: '$150 / person',
     currency: 'USD',
-    bestSeason: 'March – June & September – November',
-    maxAltitude: '4,660 m (Kora La Tibet Border)',
-    terrain: 'High-altitude gravel, cliffside switchbacks, dry riverbeds, suspension crossings',
-    groupSize: '4–8 Riders (Small Group Guarantee)',
+    difficulty: 'Beginner–Intermediate',
+    routeSummary: 'Pokhara → Sarangkot → Naudanda → Pokhara',
+    bestSeason: 'Year-Round (Best: September – June)',
+    maxAltitude: '1,592 m (Sarangkot Ridge)',
+    terrain: 'Scenic paved mountain roads, hillside twisties, traditional village tracks, panoramic viewpoints',
+    groupSize: '1–6 Riders (Private or Small Group)',
     bikeProvided: 'Royal Enfield Himalayan 450 / Scram 411 / Honda CRF300L',
-    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+    heroImage: tour1Img,
     galleryImages: [
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      tour1Img,
       'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
     ],
-    shortDescription: 'Ride beyond the ordinary into the high desert of Mustang—ancient walled kingdoms, dramatic red clay cliffs, endless mountain tracks, and the ultimate Himalayan frontier.',
-    fullDescription: 'The Upper Mustang Motorcycle Expedition is our crown jewel. Restricted to foreign travelers until 1992, Upper Mustang (the ancient Kingdom of Lo) remains one of the most culturally preserved and geologically staggering places on Earth. Starting from our lakeside base in Pokhara, you ascend through the world\'s deepest gorge (Kali Gandaki) between the 8,000m giants Annapurna I and Dhaulagiri, before breaching the rain-shadow desert. Here, the landscape transforms into windswept red canyons, 1,000-year-old Buddhist sky caves, and the legendary walled capital of Lo Manthang.',
+    shortDescription: 'Escape Pokhara and ride into the hills surrounding Nepal\'s adventure capital. Mountain roads, traditional villages, Himalayan viewpoints and flowing countryside riding into one unforgettable day.',
+    fullDescription: 'Escape Pokhara and ride into the hills surrounding Nepal\'s adventure capital.\n\nThe Himalayan Monster Day Ride combines scenic mountain roads, traditional villages, Himalayan viewpoints and flowing countryside riding into one unforgettable day.\n\nPerfect for riders who want to experience Nepal on two wheels without committing to a multi-day expedition.',
     routeHighlights: [
-      'Ride the legendary Kali Gandaki River canyon between Annapurna and Dhaulagiri',
-      'Cross high-altitude passes over 3,800m with panoramic views of Nilgiri and Damodar Himal',
-      'Explore the 15th-century walled city of Lo Manthang and royal palace',
-      'Ride to the Kora La Pass (4,660m) on the border of Tibet',
-      'Visit ancient sky caves in Chhoser and 8th-century Ghar Gompa',
-      'Holy pilgrimage stop at Muktinath (3,710m)'
+      'Sarangkot',
+      'Annapurna & Machhapuchhre views',
+      'Pokhara Valley',
+      'Mountain villages',
+      'Himalayan countryside',
+      'Scenic mountain roads',
+      'Photography stops'
     ],
     itinerary: [
       {
         day: 1,
-        title: 'Arrival in Pokhara & Machine Briefing',
-        distanceKm: '25 km warmup',
-        ridingTime: '1.5 hrs',
-        startAltitude: '820 m',
-        endAltitude: '820 m',
-        maxAltitude: '1,400 m',
-        highlights: ['Bike setup and ergonomics fitting', 'Briefing over coffee in Lakeside Pokhara', 'Sunset ride to Sarangkot ridge'],
-        description: 'Meet at Himalayan Monster base camp in Pokhara. We dial in bike setups, suspension settings, and safety gear. Afternoon shakedown ride up to Sarangkot to test machines before an expedition dinner.',
-        overnight: 'Lakeside Boutique Lodge, Pokhara'
-      },
-      {
-        day: 2,
-        title: 'Pokhara to Tatopani Hot Springs',
-        distanceKm: '110 km',
+        title: 'Pokhara → Sarangkot → Naudanda → Pokhara',
+        distanceKm: '65 km loop',
         ridingTime: '4–5 hrs',
         startAltitude: '820 m',
-        endAltitude: '1,190 m',
-        maxAltitude: '1,500 m',
-        highlights: ['Tarmac to dirt transition at Beni', 'Kali Gandaki river valley entry', 'Natural hot springs soak in Tatopani'],
-        description: 'Leaving Pokhara westward, we transition onto rocky valley terrain after Beni. The ride hugs the roaring Kali Gandaki river. We settle into Tatopani for a soak in natural geothermal waters.',
-        overnight: 'Riverside Lodge, Tatopani'
-      },
-      {
-        day: 3,
-        title: 'Tatopani to Kagbeni via Marpha',
-        distanceKm: '75 km',
-        ridingTime: '5–6 hrs',
-        startAltitude: '1,190 m',
-        endAltitude: '2,800 m',
-        maxAltitude: '2,800 m',
-        highlights: ['Rupse Waterfall crossing', 'Cobblestone alleyways of Marpha (Apple Capital)', 'Wind-tunnel valley ride to ancient Kagbeni'],
-        description: 'We ride deeper into the gorge. The air thins and vegetation drops away as we enter the trans-Himalayan rain shadow. We pass apple orchards in Marpha and reach Kagbeni—the ancient gateway checkpoint to Upper Mustang.',
-        overnight: 'Heritage Tibetan Guest House, Kagbeni'
-      },
-      {
-        day: 4,
-        title: 'Kagbeni to Chele & Syangboche',
-        distanceKm: '40 km',
-        ridingTime: '4–5 hrs',
-        startAltitude: '2,800 m',
-        endAltitude: '3,800 m',
-        maxAltitude: '3,850 m',
-        highlights: ['Special Restricted Area Permit checkpoint', 'Red clay cliffs of Tangbe and Chhusang', 'Steep switchbacks over Taklam La'],
-        description: 'Our special permits are stamped as we officially enter Upper Mustang. The dirt road climbs through dramatic ochre and crimson rock chimneys. River crossings and loose dirt climbs test throttle control.',
-        overnight: 'Mountain Teahouse, Syangboche'
-      },
-      {
-        day: 5,
-        title: 'Syangboche to Charang (Tsarang)',
-        distanceKm: '45 km',
-        ridingTime: '4–5 hrs',
-        startAltitude: '3,800 m',
-        endAltitude: '3,560 m',
-        maxAltitude: '4,010 m (Nyi La Pass)',
-        highlights: ['Crossing Nyi La Pass (4,010m)', 'Longest Mani prayer wall in Mustang at Ghami', 'The red cliffs of Dhakmar'],
-        description: 'Ascend over the high Nyi La pass where prayer flags whip in the Himalayan winds. We ride across wide lunar plateaus to Charang, home to an ancient five-story white Dzong fort and 14th-century monastery.',
-        overnight: 'Traditional Tibetan Inn, Charang'
-      },
-      {
-        day: 6,
-        title: 'Charang to Lo Manthang (The Walled Kingdom)',
-        distanceKm: '30 km',
-        ridingTime: '3 hrs',
-        startAltitude: '3,560 m',
-        endAltitude: '3,840 m',
-        maxAltitude: '3,950 m (Lo La Pass)',
-        highlights: ['First view of walled Lo Manthang from Lo La Pass', 'Entering the historic fortified gates', 'Local Butter Tea with Mustang elders'],
-        description: 'A crisp morning ride leads to the Lo La Pass. Suddenly, the isolated walled fortress city of Lo Manthang appears across the vast desert plain. We ride through the main gate into centuries of living Tibetan history.',
-        overnight: 'Royal Himalayan Lodge, Lo Manthang'
-      },
-      {
-        day: 7,
-        title: 'Lo Manthang, Sky Caves & Kora La (Tibet Border)',
-        distanceKm: '60 km round-trip',
-        ridingTime: '4–5 hrs',
-        startAltitude: '3,840 m',
-        endAltitude: '3,840 m',
-        maxAltitude: '4,660 m',
-        highlights: ['Ride up to Kora La Border post with China/Tibet (4,660m)', 'Exploring multi-level Jhong Sky Caves in Chhoser', 'Nomad camps with Tibetan mastiffs'],
-        description: 'An extraordinary day pushing north toward the border of Tibet. The terrain opens into vast Martian gravel flats. We climb to 4,660m before returning to explore ancient cave dwellings carved into vertical canyon walls.',
-        overnight: 'Royal Himalayan Lodge, Lo Manthang'
-      },
-      {
-        day: 8,
-        title: 'Lo Manthang to Ghami via Ghar Gompa',
-        distanceKm: '45 km',
-        ridingTime: '5 hrs',
-        startAltitude: '3,840 m',
-        endAltitude: '3,520 m',
-        maxAltitude: '4,200 m (Chogo La)',
-        highlights: ['Oldest monastery in Mustang (Ghar Gompa, 8th century)', 'Remote off-piste desert ridge lines', 'Dhakmar dramatic red wind towers'],
-        description: 'Taking an alternative western ridge route, we visit Ghar Gompa where Guru Rinpoche tamed Himalayan demons in the 700s. Stunning dirt singletrack sections and sweeping canyon panoramas.',
-        overnight: 'Local Eco Teahouse, Ghami'
-      },
-      {
-        day: 9,
-        title: 'Ghami to Muktinath Temple',
-        distanceKm: '65 km',
-        ridingTime: '5 hrs',
-        startAltitude: '3,520 m',
-        endAltitude: '3,710 m',
-        maxAltitude: '3,800 m',
-        highlights: ['Descent down the Kali Gandaki canyon', 'Climb to holy Muktinath sacred water spouts', 'Thorong La pass mountain backdrop'],
-        description: 'We ride south exiting Upper Mustang and begin the ascent to Muktinath, a holy shrine sacred to both Hindus and Buddhists with eternal natural gas flames and 108 stone gargoyle spouts.',
-        overnight: 'High Altitude Lodge, Muktinath'
-      },
-      {
-        day: 10,
-        title: 'Muktinath to Kalopani / Marpha',
-        distanceKm: '60 km',
-        ridingTime: '4 hrs',
-        startAltitude: '3,710 m',
-        endAltitude: '2,530 m',
-        maxAltitude: '3,710 m',
-        highlights: ['Technical downhill gravel stretches', 'Dhaulagiri and Annapurna ice falls looming overhead', 'Pine forest re-entry'],
-        description: 'Fast-paced descent back into the forested pine slopes of Kalopani. The contrast between Mustang\'s arid stone and lush sub-tropical greenery is intoxicating.',
-        overnight: 'Pine View Lodge, Kalopani'
-      },
-      {
-        day: 11,
-        title: 'Kalopani to Pokhara (Triumphant Return)',
-        distanceKm: '125 km',
-        ridingTime: '5–6 hrs',
-        startAltitude: '2,530 m',
         endAltitude: '820 m',
-        maxAltitude: '2,530 m',
-        highlights: ['Final thrilling river gorge run', 'Smooth tarmac winding back through Kaski hills', 'Celebration BBQ & craft beers at Himalayan Monster HQ'],
-        description: 'The final leg takes us down through Beni and back onto sweeping blacktop roads into Pokhara. We roll back into headquarters to celebrate an unforgettable 12-day Himalayan masterclass.',
-        overnight: 'Lakeside Resort, Pokhara'
-      },
-      {
-        day: 12,
-        title: 'Expedition Debrief & Farewell',
-        distanceKm: '0 km',
-        ridingTime: '—',
-        startAltitude: '820 m',
-        endAltitude: '820 m',
-        maxAltitude: '820 m',
-        highlights: ['Media exchange (GoPro/Drone footage)', 'Post-ride mechanical debrief', 'Departure transfers or extended Pokhara stay'],
-        description: 'Relax by Phewa Lake, share HD photos and drone videos captured by the support team, and wrap up your Himalayan journey.',
-        overnight: 'Tour concludes'
+        maxAltitude: '1,592 m (Sarangkot)',
+        highlights: [
+          'Morning motorcycle briefing and bike preparation',
+          'Ride from Pokhara toward Sarangkot and climb into the hills',
+          'Stop at Himalayan viewpoints before continuing toward Naudanda through mountain roads and villages',
+          'Enjoy lunch along the route before exploring additional countryside roads',
+          'Descend toward Pokhara and finish the ride in the afternoon'
+        ],
+        description: 'Morning motorcycle briefing and bike preparation. Ride from Pokhara toward Sarangkot and climb into the hills. Stop at Himalayan viewpoints before continuing toward Naudanda through mountain roads and villages. Enjoy lunch along the route before exploring additional countryside roads. Descend toward Pokhara and finish the ride in the afternoon.',
+        overnight: 'Pokhara'
       }
     ],
     inclusions: [
-      'Premium motorcycle (Himalayan 450 / CRF300L / Scram 411)',
-      'All fuel for the entire expedition route',
-      'Upper Mustang Special Restricted Area Permit (RAP $500/rider value)',
-      'Annapurna Conservation Area Project (ACAP) & TIMS permits',
-      'Professional lead motorcycle guide & certified Himalayan mechanic',
-      '4x4 Support Vehicle for luggage, spare parts, medical kit & tools',
-      'All 11 nights premium lodge / heritage guesthouse accommodation',
-      'All breakfast, trail lunches, and expedition dinners',
-      'Spare motorcycle parts, tires, and maintenance consumables',
-      'Satellite communication device (Garmin inReach) & Emergency Oxygen kit',
-      'Himalayan Monster expedition jersey and welcome gift pack'
+      'Premium motorcycle rental (Royal Enfield Himalayan 450 / CRF300L)',
+      'Full fuel allocation for the day ride',
+      'Experienced Himalayan Monster lead road captain',
+      'Traditional village lunch & mineral water',
+      'Comprehensive machine safety briefing & ergonomics setup',
+      'Basic first aid kit & mechanical trail support'
     ],
     exclusions: [
-      'International flights to/from Nepal & Kathmandu-Pokhara transit',
-      'Personal travel & medical evacuation insurance (Mandatory for high altitude)',
-      'Personal riding apparel (Helmets, jackets, armor, boots, gloves)',
-      'Alcohol, personal snacks, and specialty barista coffees',
-      'Motorcycle damage security deposit (Refundable upon clean return)',
-      'Tips and gratuities for support crew & guides'
+      'Personal motorcycle riding gear (helmet, jacket, gloves available for rent)',
+      'Personal medical & travel insurance',
+      'Alcoholic beverages & personal snacks',
+      'Gratuities for your lead guide'
     ],
-    accommodation: 'Carefully curated mountain lodges, traditional Tibetan stone guest houses, and lakeside boutique hotels in Pokhara.',
+    accommodation: 'Day tour return to your Pokhara accommodation.',
     preparationRequirements: [
-      'Minimum 2+ years of continuous motorcycle riding experience',
-      'Comfort with unpaved roads, loose gravel, ruts, and shallow water crossings',
-      'High-altitude physical endurance (Elevation spans up to 4,660 m)',
-      'Valid International Driving Permit (IDP) with motorcycle endorsement',
-      'Comprehensive travel insurance covering motorcycle riding above 4,000m'
+      'Valid motorcycle driver’s license or International Driving Permit',
+      'Comfortable riding jacket, helmet, sturdy footwear, and eye protection',
+      'Basic throttle control and road awareness on winding hill terrain'
     ],
     faqs: [
       {
-        question: 'What is the road condition like in Upper Mustang?',
-        answer: 'The terrain is a mix of paved tarmac between Pokhara and Beni, followed by packed gravel, rocky mountain tracks, switchbacks, dry riverbeds, and sandy high-desert plateaus in Mustang.'
+        question: 'Is this ride suitable for beginner riders?',
+        answer: 'Yes! The Pokhara Himalayan Day Ride is tailored for beginner to intermediate riders comfortable on paved mountain curves with minor village tarmac transitions.'
       },
       {
-        question: 'Do I need a special permit for Upper Mustang?',
-        answer: 'Yes. Upper Mustang is a restricted military border area requiring a special government permit ($500 USD for 10 days) plus ACAP permits. Himalayan Monster handles all paperwork and fees in advance.'
+        question: 'Can I bring a pillion passenger?',
+        answer: 'Yes, our Royal Enfield Himalayan 450s are very comfortable for pillion riders. Please let us know in advance when booking.'
       },
       {
-        question: 'What happens if a motorcycle breaks down?',
-        answer: 'Our dedicated 4x4 support vehicle trails the group carrying a professional motorcycle mechanic, full spare parts inventory, tools, backup fuel, and a spare machine if needed.'
-      },
-      {
-        question: 'Can I bring a pillion (passenger)?',
-        answer: 'Yes, experienced pillions are welcome on the Himalayan 450. If a passenger prefers to take a break on rough sections, they are welcome to ride in the comfortable 4x4 support vehicle.'
+        question: 'What time does the ride start and end?',
+        answer: 'We meet at 8:30 AM at our Lakeside Pokhara Base Camp for setup and safety briefing, departing at 9:15 AM and returning to Pokhara around 3:30–4:30 PM.'
       }
     ],
     reviews: [
       {
-        id: 'rev-1',
+        id: 'rev-01-1',
         riderName: 'Marcus Lindqvist',
         country: 'Sweden',
         countryCode: 'SE',
         rating: 5,
         date: 'October 2025',
-        comment: 'Riding the Himalayan 450 into Lo Manthang was hands down the greatest two-wheel adventure of my life. Himalayan Monster’s mechanical support and route knowledge were world-class.',
+        comment: 'The perfect day out from Pokhara! We rode up through Sarangkot with crystal-clear Annapurna views. Great bikes and an awesome guide.',
         bike: 'Royal Enfield Himalayan 450'
-      },
-      {
-        id: 'rev-2',
-        riderName: 'Dave & Sarah K.',
-        country: 'Australia',
-        countryCode: 'AU',
-        rating: 5,
-        date: 'May 2025',
-        comment: 'Not your average cookie-cutter tour. Raw, cinematic, authentic, and professionally executed. The border ride to Kora La will stay with me forever.',
-        bike: 'Honda CRF300L'
       }
     ],
-    relatedTourSlugs: ['pokhara-jomsom-motorcycle-tour', 'annapurna-motorcycle-tour', 'mustang-mtb-tour'],
-    seoTitle: 'Upper Mustang Motorcycle Tour Pokhara Nepal | Himalayan Monster',
-    seoDescription: 'Experience the ultimate 10-12 day Upper Mustang motorcycle tour from Pokhara. Ride Royal Enfield Himalayan 450s to Lo Manthang and Tibet border with full 4x4 support.',
-    seoKeywords: ['Upper Mustang motorcycle tour', 'Mustang motorbike tour Nepal', 'Pokhara to Lo Manthang motorcycle', 'Royal Enfield tour Nepal', 'Himalayan 450 rental Pokhara'],
-    routeMapDescription: 'Pokhara → Beni → Tatopani → Marpha → Kagbeni → Chele → Syangboche → Charang → Lo Manthang → Kora La (Tibet Border) → Muktinath → Pokhara'
+    relatedTourSlugs: ['pokhara-jomsom-adventure', 'pokhara-mtb-explorer'],
+    seoTitle: 'Pokhara Himalayan Day Ride | 1 Day Motorcycle Tour Nepal',
+    seoDescription: 'Ride the Himalayan foothills around Pokhara with Himalayan Monster. 1-day motorcycle tour to Sarangkot and Naudanda with stunning Annapurna views.',
+    seoKeywords: ['Pokhara motorcycle day ride', 'Sarangkot bike tour', 'Nepal 1 day motorbike tour', 'Himalayan Monster day ride'],
+    routeMapDescription: 'Pokhara Lakeside → Sarangkot Ridge (1,592m) → Kaskikot → Naudanda High Road → Pame Shoreline → Pokhara.'
   },
+
+  // 02. POKHARA → JOMSOM ADVENTURE
   {
-    id: 'pokhara-jomsom-motorcycle',
-    slug: 'pokhara-jomsom-motorcycle-tour',
-    title: 'Pokhara → Jomsom Kali Gandaki Sprint',
+    id: 'pokhara-jomsom-adventure',
+    slug: 'pokhara-jomsom-adventure',
+    packageNumber: '02',
+    title: 'Pokhara → Jomsom Adventure',
     category: 'motorcycle',
     isFlagship: false,
-    tagline: 'High-Altitude Gorge Blast into Lower Mustang',
+    tagline: 'Ride Into the Kali Gandaki Valley',
     durationDays: 3,
     durationLabel: '3 DAYS',
-    difficulty: 'Moderate',
-    startingPricePlaceholder: 'Inquire for current seasonal pricing',
+    priceUsd: 650,
+    price: '$650 / person',
+    startingPricePlaceholder: '$650 / person',
     currency: 'USD',
-    bestSeason: 'September – December & February – June',
-    maxAltitude: '2,800 m (Jomsom / Marpha)',
-    terrain: 'Scenic paved blacktop, mountain gravel, suspension bridge trails, river crossings',
+    difficulty: 'Intermediate',
+    routeSummary: 'Pokhara → Tatopani → Jomsom → Kagbeni → Pokhara',
+    bestSeason: 'March – June & September – November',
+    maxAltitude: '2,800 m (Kagbeni)',
+    terrain: 'River gorge gravel, mountain roads, cliffside dirt tracks, suspension bridge views',
     groupSize: '2–8 Riders',
-    bikeProvided: 'Royal Enfield Himalayan 450 / Scram 411 / XPulse 200 4V',
-    heroImage: 'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1600&auto=format&fit=crop',
+    bikeProvided: 'Royal Enfield Himalayan 450 / Honda CRF300L',
+    heroImage: tour2Img,
     galleryImages: [
-      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop',
+      tour2Img,
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
     ],
-    shortDescription: 'A spectacular fast-paced ride from Pokhara into the world’s deepest river gorge, dramatic waterfalls, apple orchards of Marpha, and the windswept valley of Jomsom.',
-    fullDescription: 'Short on time but hungry for real Himalayan dirt? The Pokhara to Jomsom 3-Day Sprint delivers the essential Mustang experience without requiring the 10-day Upper Mustang restricted permit. Ride alongside the Kali Gandaki riverbed, soak in Tatopani hot springs, taste fresh cider in Marpha, and stand beneath Nilgiri (7,061m) and Dhaulagiri (8,167m).',
+    shortDescription: 'Three days of pure Himalayan riding. Follow the Kali Gandaki Valley from the lush hills of Pokhara into the dry mountain landscape of Mustang.',
+    fullDescription: 'Three days of pure Himalayan riding.\n\nFollow the Kali Gandaki Valley from the lush hills surrounding Pokhara into the dry mountain landscape of Mustang.\n\nWaterfalls, suspension bridges, remote villages and rugged roads make this one of our best short expeditions.',
     routeHighlights: [
-      'Blast through the world’s deepest gorge between 8,000m peaks',
-      'Soak tired muscles in Tatopani natural hot springs',
-      'Explore the ancient Thakali cobblestone alleys and apple brandy distilleries of Marpha',
-      'Ride the high-wind gravel flatlands of Jomsom'
+      'Kali Gandaki Valley',
+      'Tatopani',
+      'Jomsom',
+      'Kagbeni',
+      'Mountain villages',
+      'Waterfalls',
+      'Himalayan landscapes',
+      'Changing terrain'
     ],
     itinerary: [
       {
         day: 1,
-        title: 'Pokhara to Tatopani Hot Springs',
-        distanceKm: '110 km',
-        ridingTime: '4 hrs',
+        title: 'Pokhara → Tatopani',
+        distanceKm: '105 km',
+        ridingTime: '4–5 hrs',
         startAltitude: '820 m',
         endAltitude: '1,190 m',
         maxAltitude: '1,500 m',
-        highlights: ['Kaski hill highway', 'Beni off-road transition', 'Thermal spring baths'],
-        description: 'Depart Pokhara early, carving blacktop through lush valleys before hitting rough dirt at Beni. Ride the river edge to Tatopani.',
-        overnight: 'Riverside Lodge, Tatopani'
+        highlights: [
+          'Depart Pokhara and ride toward Beni',
+          'Continue along the Kali Gandaki Valley toward Tatopani',
+          'Overnight: Tatopani'
+        ],
+        description: 'Depart Pokhara and ride toward Beni. Continue along the Kali Gandaki Valley toward Tatopani. Relax in the natural geothermal hot springs by the roaring river.',
+        overnight: 'Tatopani'
       },
       {
         day: 2,
-        title: 'Tatopani to Marpha & Jomsom',
-        distanceKm: '65 km',
-        ridingTime: '4–5 hrs',
+        title: 'Tatopani → Jomsom → Kagbeni',
+        distanceKm: '75 km',
+        ridingTime: '5 hrs',
         startAltitude: '1,190 m',
         endAltitude: '2,800 m',
         maxAltitude: '2,800 m',
-        highlights: ['Ghasa canyon gorge', 'Marpha apple orchards', 'Nilgiri mountain vistas'],
-        description: 'Ascend the rugged gorge through waterfalls and pine forests into the open Tibetan-influenced desert valley of Marpha and Jomsom.',
-        overnight: 'Heritage Hotel, Jomsom'
+        highlights: [
+          'Continue north through increasingly dramatic mountain terrain',
+          'Stop at Jomsom before riding toward Kagbeni',
+          'Explore the ancient settlement and surrounding landscape',
+          'Overnight: Kagbeni'
+        ],
+        description: 'Continue north through increasingly dramatic mountain terrain. Stop at Jomsom before riding toward Kagbeni. Explore the ancient settlement, mud-walled alleyways, and surrounding landscape.',
+        overnight: 'Kagbeni'
       },
       {
         day: 3,
-        title: 'Jomsom to Pokhara Return',
-        distanceKm: '155 km',
-        ridingTime: '6 hrs',
+        title: 'Kagbeni → Jomsom → Tatopani → Pokhara',
+        distanceKm: '180 km',
+        ridingTime: '6–7 hrs',
         startAltitude: '2,800 m',
         endAltitude: '820 m',
         maxAltitude: '2,800 m',
-        highlights: ['Fast morning descent', 'Scenic lunch overlooking Kali Gandaki', 'Evening return to Lakeside Pokhara'],
-        description: 'An exhilarating descent winding back through the gorge, finishing with smooth twists into Pokhara for debrief drinks.',
-        overnight: 'Tour concludes in Pokhara'
+        highlights: [
+          'Begin the descent south',
+          'Ride through Jomsom and Tatopani before returning to Pokhara'
+        ],
+        description: 'Begin the descent south. Ride through Jomsom and Tatopani along the Kali Gandaki corridor before returning to Pokhara to wrap up the adventure.',
+        overnight: 'Pokhara'
       }
     ],
     inclusions: [
-      'Motorcycle of choice with full tank',
-      'ACAP & TIMS mountain permits',
-      'Experienced lead rider & mechanic guide',
-      '2 nights accommodation with breakfast & dinner',
-      'Basic spares and puncture repair kit'
+      'Dual-sport adventure motorcycle rental with fuel',
+      '2 nights mountain lodge / teahouse accommodation',
+      'All meals (Breakfast, Lunch, Dinner) on the road',
+      'ACAP (Annapurna Conservation Area) permits & TIMS',
+      'Certified Himalayan lead road captain & mechanical support',
+      'Tatopani hot springs entry fee'
     ],
-    exclusions: ['Lunches and drinks', 'Personal riding gear', 'Insurance'],
-    accommodation: 'Clean local lodges with private rooms and hot showers.',
-    preparationRequirements: ['Intermediate motorcycle control on loose surfaces', 'Valid motorcycle driving license'],
+    exclusions: [
+      'Personal riding apparel (gear rental available)',
+      'Travel and emergency medical evacuation insurance',
+      'Alcoholic drinks, sodas, and personal lodge expenses',
+      'Tips for guide and support staff'
+    ],
+    accommodation: 'Authentic riverside lodges in Tatopani and traditional Tibetan-style guesthouses in Kagbeni.',
+    preparationRequirements: [
+      'Valid motorcycle license',
+      'Comfortable riding on mixed gravel, dirt, and wet riverbed sections',
+      'Layered riding gear for changing tropical-to-alpine temperatures'
+    ],
     faqs: [
-      { question: 'Is this tour suitable for beginners?', answer: 'We recommend riders have at least some unpaved gravel experience, though intermediate street riders handle this route very well.' }
+      {
+        question: 'What are the road conditions like to Jomsom?',
+        answer: 'The route transitions from smooth tarmac out of Pokhara to packed dirt, gravel riverbeds, and carved cliffside roads along the Kali Gandaki canyon.'
+      },
+      {
+        question: 'Is acclimatization needed for 2,800m?',
+        answer: '2,800m is moderate altitude. Most riders feel very comfortable, and staying in Tatopani on Day 1 provides a smooth ascent profile.'
+      }
     ],
     reviews: [
-      { id: 'rev-3', riderName: 'Liam Patterson', country: 'United Kingdom', countryCode: 'GB', rating: 5, date: 'November 2025', comment: 'The best 3 days you could possibly spend in Nepal. The transition from green jungle to raw mountain rock in a few hours is unreal.', bike: 'Royal Enfield Himalayan 450' }
+      {
+        id: 'rev-02-1',
+        riderName: 'Daniel Schmidt',
+        country: 'Germany',
+        countryCode: 'DE',
+        rating: 5,
+        date: 'November 2025',
+        comment: 'Unbelievable 3 days! The transition from sub-tropical valley to the wind-carved desert of Mustang is surreal. Bikes were in mint condition.',
+        bike: 'Royal Enfield Himalayan 450'
+      }
     ],
-    relatedTourSlugs: ['upper-mustang-motorcycle-tour', 'annapurna-motorcycle-tour', 'pokhara-mtb-explorer'],
-    seoTitle: 'Pokhara to Jomsom Motorcycle Tour 3 Days | Himalayan Monster',
-    seoDescription: 'Book the 3-day Pokhara to Jomsom motorbike tour with Himalayan Monster. Ride the Kali Gandaki canyon, Marpha orchards, and Tatopani hot springs.',
-    seoKeywords: ['jomsom motorcycle tour', 'pokhara to jomsom motorbike', 'motorbike rental pokhara', 'kali gandaki motorcycle tour'],
-    routeMapDescription: 'Pokhara → Kusma → Beni → Tatopani → Ghasa → Marpha → Jomsom → Pokhara'
+    relatedTourSlugs: ['annapurna-motorcycle-adventure', 'upper-mustang-motorcycle-expedition'],
+    seoTitle: 'Pokhara to Jomsom Motorcycle Tour | 3 Days Himalayan Monster',
+    seoDescription: 'Ride the Kali Gandaki valley from Pokhara to Jomsom and Kagbeni on a 3-day adventure motorcycle expedition in Nepal with Himalayan Monster.',
+    seoKeywords: ['Pokhara to Jomsom motorcycle tour', 'Kali Gandaki bike ride', 'Kagbeni motorbike trip Nepal', 'Mustang 3 day tour'],
+    routeMapDescription: 'Pokhara → Kusma → Beni → Tatopani Hot Springs → Ghasa → Marpha → Jomsom → Kagbeni Gateway → Pokhara.'
   },
+
+  // 03. ANNAPURNA MOTORCYCLE ADVENTURE
   {
     id: 'annapurna-motorcycle-adventure',
-    slug: 'annapurna-motorcycle-tour',
-    title: 'Annapurna Himalayan Motorcycle Adventure',
+    slug: 'annapurna-motorcycle-adventure',
+    packageNumber: '03',
+    title: 'Annapurna Motorcycle Adventure',
     category: 'motorcycle',
     isFlagship: false,
-    tagline: 'Ride the Giants of the Annapurna Massif',
+    tagline: 'From Pokhara to the High Himalayas',
     durationDays: 5,
     durationLabel: '5 DAYS',
-    difficulty: 'Challenging',
-    startingPricePlaceholder: 'Inquire for group and private rates',
+    priceUsd: 1150,
+    price: '$1,150 / person',
+    startingPricePlaceholder: '$1,150 / person',
     currency: 'USD',
-    bestSeason: 'March – May & September – November',
-    maxAltitude: '3,200 m',
-    terrain: 'Mountain blacktop, forest dirt tracks, cliff-edge switchbacks, river valleys',
+    difficulty: 'Intermediate–Challenging',
+    routeSummary: 'Pokhara → Tatopani → Jomsom → Kagbeni → Muktinath → Pokhara',
+    bestSeason: 'March – June & September – November',
+    maxAltitude: '3,710 m (Muktinath Temple)',
+    terrain: 'River gorges, rocky alpine switchbacks, high-altitude desert plateaus, paved sections',
     groupSize: '3–8 Riders',
-    bikeProvided: 'Royal Enfield Himalayan 450 / CRF300L',
-    heroImage: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1600&auto=format&fit=crop',
+    bikeProvided: 'Royal Enfield Himalayan 450 / Honda CRF300L',
+    heroImage: tour3Img,
     galleryImages: [
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop',
+      tour3Img,
       'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
     ],
-    shortDescription: 'Circumnavigate deep valleys and ancient Gurung mountain settlements under the dramatic gaze of Annapurna South, Machapuchare (Fishtail) and Lamjung Himal.',
-    fullDescription: 'A 5-day high-intensity Himalayan expedition traversing diverse ecological zones—from subtropical river valleys and lush rhododendron forests to rugged sub-alpine alpine cliff passes. Designed for passionate riders who want challenging dirt roads paired with authentic hill-tribe culture.',
+    shortDescription: 'Go deeper into the Annapurna region and experience the dramatic transition from green Himalayan foothills to the high-altitude desert around Mustang.',
+    fullDescription: 'Go deeper into the Annapurna region and experience the dramatic transition from green Himalayan foothills to the high-altitude desert around Mustang.\n\nThis expedition combines mountain riding, Himalayan culture and some of Nepal\'s most spectacular landscapes.',
     routeHighlights: [
-      'Ride the rugged backroads around the Annapurna sanctuary',
-      'Panoramic views of Machapuchare (6,993m) and Annapurna II/IV',
-      'Overnight in traditional stone Gurung villages and hilltop viewpoints',
-      'Technical dirt switchbacks and thrilling single-lane ridgelines'
+      'Annapurna region',
+      'Kali Gandaki Valley',
+      'Jomsom',
+      'Kagbeni',
+      'Muktinath',
+      'Himalayan desert',
+      'Mountain villages',
+      'High-altitude riding'
     ],
     itinerary: [
-      { day: 1, title: 'Pokhara to Besisahar & Chame Gateway', distanceKm: '115 km', ridingTime: '5 hrs', startAltitude: '820 m', endAltitude: '1,430 m', highlights: ['Marsyangdi river valley', 'Cliff roads', 'Waterfalls'], description: 'Ride east out of Pokhara towards the Marsyangdi river valley, entering the dramatic gorge leading up into the Annapurna range.', overnight: 'River Lodge, Besisahar' },
-      { day: 2, title: 'Besisahar into High Pine Forests (Chame)', distanceKm: '65 km', ridingTime: '5 hrs', startAltitude: '1,430 m', endAltitude: '2,670 m', highlights: ['Dramatic cliff roads blasted into rock', 'Pine forests', 'View of Lamjung Himal'], description: 'One of the most thrilling dirt track segments in the Himalayas with sheer rock walls and thunderous river views.', overnight: 'Alpine Lodge, Chame' },
-      { day: 3, title: 'Chame Ridge Exploration & Pisang Panorama', distanceKm: '40 km', ridingTime: '4 hrs', startAltitude: '2,670 m', endAltitude: '3,200 m', highlights: ['Paungda Danda curved rock face', 'Pisang Peak views', 'Ancient prayer wheels'], description: 'Ascend into the sub-alpine valley of Upper Manang with gigantic natural rock amphitheaters and glacier views.', overnight: 'Mountain Inn, Pisang' },
-      { day: 4, title: 'Pisang to Bandipur Historic Hill Town', distanceKm: '135 km', ridingTime: '5–6 hrs', startAltitude: '3,200 m', endAltitude: '1,030 m', highlights: ['Fast mountain descent', 'Newari architecture in Bandipur', 'Sunset over Himalayan range'], description: 'Ride down the valley and climb to the preserved 18th-century Newari hilltop settlement of Bandipur.', overnight: 'Heritage Boutique Lodge, Bandipur' },
-      { day: 5, title: 'Bandipur to Pokhara via Backcountry Trails', distanceKm: '90 km', ridingTime: '4 hrs', startAltitude: '1,030 m', endAltitude: '820 m', highlights: ['Remote ridge roads', 'Begnas Lake circuit', 'Himalayan Monster HQ finish'], description: 'Take backcountry trails avoiding main highways, winding around Begnas Lake back into Pokhara for celebration.', overnight: 'Tour concludes' }
+      {
+        day: 1,
+        title: 'Pokhara → Tatopani',
+        distanceKm: '105 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '820 m',
+        endAltitude: '1,190 m',
+        maxAltitude: '1,500 m',
+        highlights: [
+          'Ride through Beni and into the Kali Gandaki Valley',
+          'Overnight: Tatopani'
+        ],
+        description: 'Ride through Beni and into the Kali Gandaki Valley. Soak in natural hot springs beneath towering cliffs.',
+        overnight: 'Tatopani'
+      },
+      {
+        day: 2,
+        title: 'Tatopani → Jomsom',
+        distanceKm: '65 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '1,190 m',
+        endAltitude: '2,720 m',
+        maxAltitude: '2,720 m',
+        highlights: [
+          'Continue north through the mountain corridor',
+          'Overnight: Jomsom'
+        ],
+        description: 'Continue north through the mountain corridor between the Annapurna and Dhaulagiri massifs. Arrive in Jomsom, the bustling mountain hub.',
+        overnight: 'Jomsom'
+      },
+      {
+        day: 3,
+        title: 'Jomsom → Kagbeni → Muktinath',
+        distanceKm: '35 km',
+        ridingTime: '3–4 hrs',
+        startAltitude: '2,720 m',
+        endAltitude: '3,710 m',
+        maxAltitude: '3,710 m',
+        highlights: [
+          'Ride through Kagbeni toward Muktinath',
+          'Explore the area around Muktinath',
+          'Overnight: Muktinath'
+        ],
+        description: 'Ride through medieval Kagbeni into the high-altitude desert plateau toward Muktinath (3,710m). Explore the sacred temple grounds, 108 water spouts, and eternal flame.',
+        overnight: 'Muktinath'
+      },
+      {
+        day: 4,
+        title: 'Muktinath → Jomsom → Tatopani',
+        distanceKm: '95 km',
+        ridingTime: '5 hrs',
+        startAltitude: '3,710 m',
+        endAltitude: '1,190 m',
+        maxAltitude: '3,710 m',
+        highlights: [
+          'Begin the descent through the Kali Gandaki Valley',
+          'Overnight: Tatopani'
+        ],
+        description: 'Begin the descent through the Kali Gandaki Valley, passing apple orchards in Marpha and dramatic waterfalls before returning to Tatopani.',
+        overnight: 'Tatopani'
+      },
+      {
+        day: 5,
+        title: 'Tatopani → Pokhara',
+        distanceKm: '105 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '1,190 m',
+        endAltitude: '820 m',
+        maxAltitude: '1,190 m',
+        highlights: [
+          'Return through Beni and the surrounding countryside',
+          'Final ride into Pokhara Lakeside'
+        ],
+        description: 'Return through Beni and the surrounding countryside to Pokhara. Conclude with a celebration dinner at Himalayan Monster Base Camp.',
+        overnight: 'Pokhara'
+      }
     ],
-    inclusions: ['Himalayan 450 or CRF300L', 'Fuel for tour', 'Guide and mechanic', 'Lodge accommodations with meals', 'All ACAP permits'],
-    exclusions: ['Personal riding gear', 'Travel insurance', 'Alcoholic beverages'],
-    accommodation: 'Mountain lodges and historic heritage inns.',
-    preparationRequirements: ['Strong gravel and rough-track riding skills', 'Valid motorcycle license'],
-    faqs: [{ question: 'How cold does it get?', answer: 'Spring and Autumn days are pleasant (15–22°C), while nights at higher altitudes (above 2,500m) drop to 2–8°C.' }],
-    reviews: [{ id: 'rev-4', riderName: 'Julien Mercier', country: 'France', countryCode: 'FR', rating: 5, date: 'April 2025', comment: 'Spectacular roads and incredible guides. The cliff road up to Chame is pure adrenaline.', bike: 'Royal Enfield Himalayan 450' }],
-    relatedTourSlugs: ['manang-motorcycle-tour', 'upper-mustang-motorcycle-tour', 'pokhara-jomsom-motorcycle-tour'],
-    seoTitle: 'Annapurna Motorcycle Tour Nepal | 5-Day Himalayan Adventure',
-    seoDescription: 'Ride the Annapurna mountain circuit by motorcycle. 5 days of dirt trails, high cliffs, and Himalayan mountain passes from Pokhara with Himalayan Monster.',
-    seoKeywords: ['Annapurna motorcycle tour', 'motorbike tour Nepal', 'Chame motorcycle adventure', 'Himalayan motorcycle expedition Pokhara'],
-    routeMapDescription: 'Pokhara → Dumre → Besisahar → Chame → Pisang → Bandipur → Begnas → Pokhara'
+    inclusions: [
+      'Dual-sport motorcycle (Royal Enfield Himalayan 450 / CRF300L) with fuel',
+      '4 nights mountain lodge accommodation',
+      'All meals (Breakfast, Lunch, Dinner) on tour',
+      'ACAP & TIMS national park permits',
+      'Lead road captain & sweep mechanic',
+      'Luggage transport & mechanical backup'
+    ],
+    exclusions: [
+      'Personal riding gear',
+      'Personal travel & high-altitude medical insurance',
+      'Bar tabs, soda, and discretionary purchases',
+      'Tips for crew'
+    ],
+    accommodation: 'Selected teahouse lodges in Tatopani, Jomsom, and high-altitude lodge in Muktinath.',
+    preparationRequirements: [
+      'Motorcycle driving license',
+      'Experience with gravel, rocks, and tight mountain switchbacks',
+      'Warm thermal riding layers for high altitude at Muktinath (3,710m)'
+    ],
+    faqs: [
+      {
+        question: 'Will we have time to explore Muktinath temple?',
+        answer: 'Yes, Day 3 includes dedicated time to walk around the sacred temple complex, see the eternal natural gas flame, and take in the panoramic views of Dhaulagiri.'
+      },
+      {
+        question: 'How cold does it get in Muktinath?',
+        answer: 'During peak riding seasons (Spring and Autumn), daytime temperatures are pleasant (12°C–18°C), while nights can dip near freezing (0°C–5°C). We recommend thermal base layers.'
+      }
+    ],
+    reviews: [
+      {
+        id: 'rev-03-1',
+        riderName: 'Claire Laurent',
+        country: 'France',
+        countryCode: 'FR',
+        rating: 5,
+        date: 'October 2025',
+        comment: 'Riding up to Muktinath surrounded by 8,000-meter peaks is something I will never forget. Flawless organization by Himalayan Monster.',
+        bike: 'Royal Enfield Himalayan 450'
+      }
+    ],
+    relatedTourSlugs: ['manang-motorcycle-expedition', 'upper-mustang-motorcycle-expedition'],
+    seoTitle: 'Annapurna Motorcycle Adventure | 5 Days Nepal Ride',
+    seoDescription: '5-Day Annapurna & Muktinath motorcycle tour in Nepal with Himalayan Monster. Ride the Kali Gandaki gorge to 3,710m with full support.',
+    seoKeywords: ['Annapurna motorcycle tour', 'Muktinath bike trip', 'Nepal 5 day motorcycle tour', 'Himalayan Monster Annapurna'],
+    routeMapDescription: 'Pokhara → Beni → Tatopani → Kalopani → Marpha → Jomsom → Kagbeni → Muktinath (3,710m) → Pokhara.'
   },
+
+  // 04. MANANG MOTORCYCLE EXPEDITION
   {
     id: 'manang-motorcycle-expedition',
-    slug: 'manang-motorcycle-tour',
-    title: 'Manang Valley Himalayan Expedition',
+    slug: 'manang-motorcycle-expedition',
+    packageNumber: '04',
+    title: 'Manang Motorcycle Expedition',
     category: 'motorcycle',
     isFlagship: false,
-    tagline: 'Deep into the Glacial Valleys of the Annapurnas',
+    tagline: 'Ride the Road to Manang',
     durationDays: 7,
     durationLabel: '7 DAYS',
-    difficulty: 'Demanding',
-    startingPricePlaceholder: 'Inquire for private & scheduled dates',
+    priceUsd: 1650,
+    price: '$1,650 / person',
+    startingPricePlaceholder: '$1,650 / person',
     currency: 'USD',
+    difficulty: 'Challenging',
+    routeSummary: 'Pokhara → Besisahar → Chame → Pisang → Manang → Besisahar → Pokhara',
     bestSeason: 'March – May & September – November',
-    maxAltitude: '3,540 m (Manang Village)',
-    terrain: 'Rough off-road rock, narrow canyon paths, glacial moraines, river crossings',
-    groupSize: '4–8 Riders',
+    maxAltitude: '3,540 m (Manang Valley) / 3,700 m (Braka Gompa)',
+    terrain: 'Marsyangdi gorge cliff tracks, rocky alpine paths, waterfalls, pine forest roads, high Himalayan plateau',
+    groupSize: '3–8 Riders',
     bikeProvided: 'Royal Enfield Himalayan 450 / Honda CRF300L',
-    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1600&auto=format&fit=crop',
+    heroImage: tour4Img,
     galleryImages: [
-      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+      tour4Img,
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop'
-    ],
-    shortDescription: 'Push deep into the high alpine valley of Manang, surrounded by towering 7,000m and 8,000m peaks, glacial lakes, and raw Himalayan single-lane trails.',
-    fullDescription: 'The Manang valley is one of the most dramatically situated alpine valleys on the planet. This 7-day ride tests machine and rider as we carve through deep canyons, past hanging glaciers, and into the Tibetan-Buddhist enclave of Manang village.',
-    routeHighlights: [
-      'Ride the high canyon trail up to Manang at 3,540m',
-      'Spectacular views of Gangapurna Glacier and Annapurna II, III, IV',
-      'Explore ancient monasteries of Braga and Milarepa’s cave trails',
-      'Challenging technical terrain rewarding riders with untouched wilderness'
-    ],
-    itinerary: [
-      { day: 1, title: 'Pokhara to Besisahar', distanceKm: '110 km', ridingTime: '4 hrs', startAltitude: '820 m', endAltitude: '760 m', highlights: ['Warmup ride', 'Marsyangdi river', 'Expedition prep'], description: 'Smooth tarmac warmup before hitting the rough stuff tomorrow.', overnight: 'Lodge, Besisahar' },
-      { day: 2, title: 'Besisahar to Tal & Timang', distanceKm: '50 km', ridingTime: '5 hrs', startAltitude: '760 m', endAltitude: '2,270 m', highlights: ['Tal waterfall bowl', 'Rocky shelf roads', 'Pine air'], description: 'The road gets raw and rocky. Climb past huge waterfalls into high alpine air.', overnight: 'Pine Lodge, Timang' },
-      { day: 3, title: 'Timang to Manang Village', distanceKm: '45 km', ridingTime: '4 hrs', startAltitude: '2,270 m', endAltitude: '3,540 m', highlights: ['Pisang apple orchards', 'Upper Manang valley basin', 'Glacier views'], description: 'Break through into the expansive upper valley. Annapurna peaks tower directly above.', overnight: 'Hotel Yeti, Manang' },
-      { day: 4, title: 'Manang Acclimatization & Glacier Lake Ride', distanceKm: '25 km off-road', ridingTime: '3 hrs', startAltitude: '3,540 m', endAltitude: '3,800 m', highlights: ['Gangapurna glacial lake', 'Braga ancient gompa', 'Yak trails'], description: 'Explore high viewpoints, monastery trails, and local yak cheese farms.', overnight: 'Hotel Yeti, Manang' },
-      { day: 5, title: 'Manang to Chame', distanceKm: '45 km', ridingTime: '4 hrs', startAltitude: '3,540 m', endAltitude: '2,670 m', highlights: ['Technical descent', 'Mountain river crossings', 'Cozy fireplace evening'], description: 'Ride back through the pine forests of Chame.', overnight: 'Mountain Lodge, Chame' },
-      { day: 6, title: 'Chame to Bandipur', distanceKm: '120 km', ridingTime: '5 hrs', startAltitude: '2,670 m', endAltitude: '1,030 m', highlights: ['Descent to foothills', 'Newari culture', 'Himalayan panoramic sunset'], description: 'Exit the gorge and climb to peaceful Bandipur.', overnight: 'Heritage Lodge, Bandipur' },
-      { day: 7, title: 'Bandipur to Pokhara', distanceKm: '80 km', ridingTime: '3 hrs', startAltitude: '1,030 m', endAltitude: '820 m', highlights: ['Scenic country twisties', 'Pokhara lakeside arrival', 'Farewell dinner'], description: 'Return to Pokhara for final celebration.', overnight: 'Tour concludes' }
-    ],
-    inclusions: ['Royal Enfield Himalayan 450 / CRF300L', 'Full fuel coverage', 'Lead guide & mechanic', 'Support vehicle for baggage', 'All permits & meals'],
-    exclusions: ['Personal insurance', 'Riding gear', 'Alcohol'],
-    accommodation: 'High alpine guest houses and boutique lodges.',
-    preparationRequirements: ['Experience on rocky, loose switchbacks', 'Good physical condition at altitude'],
-    faqs: [{ question: 'Do we get altitude sickness?', answer: 'We stage the ascent gradually over several days to allow proper acclimatization.' }],
-    reviews: [{ id: 'rev-5', riderName: 'Sebastian Weber', country: 'Germany', countryCode: 'DE', rating: 5, date: 'October 2025', comment: 'The Manang valley is breathtaking. The Himalayan 450s performed flawlessly even at 3,600m.', bike: 'Royal Enfield Himalayan 450' }],
-    relatedTourSlugs: ['annapurna-motorcycle-tour', 'upper-mustang-motorcycle-tour', 'mustang-mtb-tour'],
-    seoTitle: 'Manang Motorcycle Tour Nepal | 7-Day High Himalayan Adventure',
-    seoDescription: '7-day motorcycle expedition to the high glacial valley of Manang from Pokhara. Experience off-road riding beneath 8,000m peaks with Himalayan Monster.',
-    seoKeywords: ['Manang motorcycle tour', 'motorbike tour Manang Nepal', 'Annapurna off-road motorcycle', 'Pokhara adventure bike tour'],
-    routeMapDescription: 'Pokhara → Besisahar → Tal → Chame → Pisang → Manang → Gangapurna → Bandipur → Pokhara'
-  },
-  {
-    id: 'mustang-mtb-expedition',
-    slug: 'mustang-mtb-tour',
-    title: 'Mustang High-Altitude MTB Expedition',
-    category: 'mtb',
-    isFlagship: false,
-    tagline: 'Enduro & Singletrack through Ancient Himalayan Canyons',
-    durationDays: 9,
-    durationLabel: '8–10 DAYS',
-    difficulty: 'Demanding',
-    startingPricePlaceholder: 'Inquire for MTB expedition dates',
-    currency: 'USD',
-    bestSeason: 'March – June & September – November',
-    maxAltitude: '4,100 m (High Passes of Mustang)',
-    terrain: 'Alpine singletrack, slickrock chutes, ancient walking trails, loose gravel descents',
-    groupSize: '4–8 Riders',
-    bikeProvided: 'Full Suspension Enduro MTB (Trek Slash / Specialized Stumpjumper)',
-    heroImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop',
       'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
     ],
-    shortDescription: 'One of the world’s top mountain bike bucket-list journeys. Ride pristine high-desert singletrack through the Kingdom of Mustang with support vehicle shuttle uplifts.',
-    fullDescription: 'The Mustang MTB Expedition combines gravity-assisted descents, ancient Buddhist trail networks, and the staggering scenery of the high Himalayas. Using a combination of 4x4 shuttles to high passes and epic technical descents, you experience pure singletrack bliss at altitudes over 3,800m.',
+    shortDescription: 'A serious Himalayan motorcycle adventure following the Marsyangdi Valley deep into the Annapurna region. Rugged roads, mountain villages, waterfalls, suspension bridges and spectacular views.',
+    fullDescription: 'A serious Himalayan motorcycle adventure following the Marsyangdi Valley deep into the Annapurna region.\n\nAs the road climbs, the landscape transforms from green valleys into high Himalayan terrain.\n\nExpect rugged roads, mountain villages, waterfalls, suspension bridges and spectacular views.\n\nPrevious motorcycle touring experience recommended.',
     routeHighlights: [
-      'Over 200 km of high-altitude Himalayan singletrack & ancient trade trails',
-      'Shuttle uplifts with 4x4 support for maximum downhill vertical descent',
-      'Ride the red cliffs of Dhakmar and Lubra Valley downhill singletrack',
-      'Enduro suspension setups dialed by certified bike mechanics'
+      'Marsyangdi Valley',
+      'Besisahar',
+      'Chame',
+      'Pisang',
+      'Manang',
+      'Himalayan villages',
+      'Mountain roads',
+      'High-altitude landscapes'
     ],
     itinerary: [
-      { day: 1, title: 'Pokhara Setup & Sarangkot MTB Warmup', distanceKm: '30 km', ridingTime: '3 hrs', startAltitude: '820 m', endAltitude: '820 m', highlights: ['Bike fit', 'Sarangkot downhill singletrack', 'Phewa lake sunset'], description: 'Unpack or fit our pro full-suspension bikes. Shred the fast singletrack from Sarangkot ridge into Pokhara.', overnight: 'Lakeside Hotel, Pokhara' },
-      { day: 2, title: 'Flight/Shuttle to Jomsom & Kagbeni Singletrack', distanceKm: '25 km', ridingTime: '4 hrs', startAltitude: '2,800 m', endAltitude: '2,800 m', highlights: ['Mountain flight/shuttle', 'Kali Gandaki riverbed trails', 'Ancient Kagbeni'], description: 'Arrive in Jomsom and ride the high windswept trail into medieval Kagbeni.', overnight: 'Guest House, Kagbeni' },
-      { day: 3, title: 'Kagbeni to Muktinath & Lubra Valley Shred', distanceKm: '35 km', ridingTime: '5 hrs', startAltitude: '2,800 m', endAltitude: '2,700 m', highlights: ['Lubra Pass 4,000m descent', 'Flowing canyon singletrack', 'Remote Bon village'], description: 'Climb or shuttle to high pass, then drop into Lubra Valley—one of the best singletrack descents on Earth.', overnight: 'Lodge, Marpha' },
-      { day: 4, title: 'Upper Mustang Chele & Ghyakar Canyon', distanceKm: '30 km', ridingTime: '5 hrs', startAltitude: '2,800 m', endAltitude: '3,500 m', highlights: ['Suspension bridge crossing', 'Cliffside bench cut trails', 'Red rock views'], description: 'Pedal and shuttle north across the border into Upper Mustang canyon singletracks.', overnight: 'Lodge, Samar' },
-      { day: 5, title: 'High Passes of Mustang to Ghami', distanceKm: '38 km', ridingTime: '5 hrs', startAltitude: '3,500 m', endAltitude: '3,520 m', highlights: ['Nyi La Pass 4,010m', 'Fast scree descents', 'Mani wall sprint'], description: 'Epic high-altitude pass riding with massive mountain panoramas.', overnight: 'Guesthouse, Ghami' },
-      { day: 6, title: 'Charang to Lo Manthang Flow Trails', distanceKm: '32 km', ridingTime: '4 hrs', startAltitude: '3,520 m', endAltitude: '3,840 m', highlights: ['Plateau flow trails', 'Lo La pass view', 'Walled city arrival'], description: 'Rolling singletrack across the high desert basin into the walled city.', overnight: 'Heritage Lodge, Lo Manthang' },
-      { day: 7, title: 'Chhoser Sky Caves & Nomad Singletrack', distanceKm: '28 km', ridingTime: '4 hrs', startAltitude: '3,840 m', endAltitude: '3,840 m', highlights: ['Sky caves exploration', 'Flowing dirt singletrack', 'Tibetan nomad trails'], description: 'A day of gravity and exploration around the northern reaches near the Tibetan frontier.', overnight: 'Heritage Lodge, Lo Manthang' },
-      { day: 8, title: 'Lo Manthang to Jomsom Epic Gravity Stage', distanceKm: '65 km (Shuttle + Ride)', ridingTime: '6 hrs', startAltitude: '3,840 m', endAltitude: '2,700 m', highlights: ['Massive cumulative vertical descent', 'High-speed gravel & trail sectors'], description: 'Utilizing shuttle uplifts and downhill traverses, we descend through the canyon back to Jomsom.', overnight: 'Hotel, Jomsom' },
-      { day: 9, title: 'Jomsom to Pokhara & Farewell Ride', distanceKm: '—', ridingTime: '—', startAltitude: '2,700 m', endAltitude: '820 m', highlights: ['Flight/transit to Pokhara', 'Celebration beers & lake chill'], description: 'Return to Pokhara to wrap up an epic MTB adventure.', overnight: 'Tour concludes' }
+      {
+        day: 1,
+        title: 'Pokhara → Besisahar',
+        distanceKm: '110 km',
+        ridingTime: '4 hrs',
+        startAltitude: '820 m',
+        endAltitude: '760 m',
+        maxAltitude: '900 m',
+        highlights: [
+          'Ride from Pokhara toward Besisahar',
+          'Overnight: Besisahar'
+        ],
+        description: 'Ride from Pokhara eastward toward Besisahar, the gateway to the Marsyangdi river valley and the Annapurna circuit trail.',
+        overnight: 'Besisahar'
+      },
+      {
+        day: 2,
+        title: 'Besisahar → Chame',
+        distanceKm: '65 km',
+        ridingTime: '5–6 hrs',
+        startAltitude: '760 m',
+        endAltitude: '2,670 m',
+        maxAltitude: '2,670 m',
+        highlights: [
+          'Enter the Annapurna mountain region',
+          'Overnight: Chame'
+        ],
+        description: 'Enter the Annapurna mountain region. The trail carves into sheer canyon walls along the Marsyangdi, passing towering waterfalls like Tal and Dharapani.',
+        overnight: 'Chame'
+      },
+      {
+        day: 3,
+        title: 'Chame → Pisang → Manang',
+        distanceKm: '45 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '2,670 m',
+        endAltitude: '3,540 m',
+        maxAltitude: '3,540 m',
+        highlights: [
+          'Ride deeper into the Himalayas through Pisang',
+          'Overnight: Manang'
+        ],
+        description: 'Ride deeper into the Himalayas through pine forests and the curved rock face of Paungda Danda into Upper Pisang and the broad valley of Manang.',
+        overnight: 'Manang'
+      },
+      {
+        day: 4,
+        title: 'Manang Exploration & Acclimatization',
+        distanceKm: '30 km local riding',
+        ridingTime: '3 hrs',
+        startAltitude: '3,540 m',
+        endAltitude: '3,540 m',
+        maxAltitude: '3,800 m (Gangapurna Lake viewpoint)',
+        highlights: [
+          'Acclimatization and exploration day',
+          'Explore Manang and surrounding areas',
+          'Overnight: Manang'
+        ],
+        description: 'Acclimatization and exploration day. Explore Manang village, ancient Braka Monastery, Gangapurna Lake, and scenic dirt tracks with Annapurna III and Gangapurna towering above.',
+        overnight: 'Manang'
+      },
+      {
+        day: 5,
+        title: 'Manang → Lower Manang',
+        distanceKm: '40 km',
+        ridingTime: '4 hrs',
+        startAltitude: '3,540 m',
+        endAltitude: '2,700 m',
+        maxAltitude: '3,540 m',
+        highlights: [
+          'Begin the return journey',
+          'Overnight: Mountain lodge'
+        ],
+        description: 'Begin the return journey down through the upper valley with spectacular reverse panoramic views of the Annapurna range.',
+        overnight: 'Mountain lodge'
+      },
+      {
+        day: 6,
+        title: 'Lower Manang → Besisahar',
+        distanceKm: '70 km',
+        ridingTime: '5–6 hrs',
+        startAltitude: '2,700 m',
+        endAltitude: '760 m',
+        maxAltitude: '2,700 m',
+        highlights: [
+          'Descend through the Marsyangdi Valley',
+          'Overnight: Besisahar'
+        ],
+        description: 'Descend through the Marsyangdi Valley, crossing hanging bridges, river waterfalls, and rocky gorge terrain back down to Besisahar.',
+        overnight: 'Besisahar'
+      },
+      {
+        day: 7,
+        title: 'Besisahar → Pokhara',
+        distanceKm: '110 km',
+        ridingTime: '4 hrs',
+        startAltitude: '760 m',
+        endAltitude: '820 m',
+        maxAltitude: '900 m',
+        highlights: [
+          'Final riding day and return to Pokhara'
+        ],
+        description: 'Final riding day cruising scenic highway curves back into Pokhara. Celebration drinks and trip debrief at Himalayan Monster Base Camp.',
+        overnight: 'Pokhara'
+      }
     ],
-    inclusions: ['Full suspension pro Enduro MTB', 'Certified PMBIA-trained MTB guide & bike mechanic', '4x4 support vehicle & shuttle uplifts', 'All permits including Upper Mustang RAP', 'All accommodation and hearty meals', 'Spare tires, pads, tubes, and tools'],
-    exclusions: ['Personal riding gear (Full face / half shell helmet, pads)', 'Travel insurance'],
-    accommodation: 'Traditional mountain lodges and boutique guesthouses.',
-    preparationRequirements: ['Solid intermediate-to-advanced MTB bike handling', 'Comfort with loose rock, switchbacks, and high altitude'],
-    faqs: [{ question: 'Can I bring my own bike?', answer: 'Yes! We provide full assembly, tuning, and packing support for riders bringing their own steeds.' }],
-    reviews: [{ id: 'rev-6', riderName: 'Cody Miller', country: 'United States', countryCode: 'US', rating: 5, date: 'May 2025', comment: 'Lubra Valley descent alone is worth the trip to Nepal. Himalayan Monster had our bikes dialed every single morning.', bike: 'Specialized Stumpjumper EVO' }],
-    relatedTourSlugs: ['pokhara-mtb-explorer', 'annapurna-mtb-tour', 'upper-mustang-motorcycle-tour'],
-    seoTitle: 'Mustang MTB Tour Nepal | High Altitude Mountain Bike Expedition',
-    seoDescription: 'Ride the world famous Mustang singletrack on full-suspension MTBs. 8-10 days of high-altitude enduro and shuttle-assisted descents in Nepal.',
-    seoKeywords: ['Mustang MTB tour', 'mountain bike tour Nepal', 'Pokhara mountain bike rental', 'enduro MTB Nepal', 'Lubra valley singletrack'],
-    routeMapDescription: 'Pokhara → Jomsom → Kagbeni → Lubra Valley → Chele → Samar → Ghami → Lo Manthang → Jomsom → Pokhara'
+    inclusions: [
+      'Royal Enfield Himalayan 450 / Honda CRF300L with all fuel',
+      '6 nights mountain lodge and heritage teahouse accommodation',
+      'All meals (Breakfast, Lunch, Dinner) during the 7 days',
+      'ACAP & TIMS national park permits',
+      'Lead road captain & sweeping mechanic with spare parts',
+      '4x4 luggage transfer vehicle'
+    ],
+    exclusions: [
+      'Personal riding gear and safety armor',
+      'High-altitude emergency medical evacuation insurance',
+      'Alcoholic drinks, snacks & personal lodge charges',
+      'Staff gratuities'
+    ],
+    accommodation: 'Handpicked local teahouses and lodges in Besisahar, Chame, Manang, and Pisang.',
+    preparationRequirements: [
+      'Previous motorcycle touring experience recommended',
+      'Comfort with cliffside narrow tracks, rocky drops, and water crossings',
+      'Good physical fitness for 3,500m+ mountain environment'
+    ],
+    faqs: [
+      {
+        question: 'How technical is the road to Manang?',
+        answer: 'The Besisahar–Chame–Manang route is famously rugged. It features single-lane carved cliff roads, loose gravel, rocky sections, and river crossings. Intermediate-to-advanced off-road confidence is recommended.'
+      },
+      {
+        question: 'Is oxygen or medical support available?',
+        answer: 'Yes, our team carries high-altitude first aid kits, pulse oximeters for daily monitoring, and emergency response protocols.'
+      }
+    ],
+    reviews: [
+      {
+        id: 'rev-04-1',
+        riderName: 'Liam O\'Connor',
+        country: 'Australia',
+        countryCode: 'AU',
+        rating: 5,
+        date: 'October 2025',
+        comment: 'Hands down the most epic road on Earth. Riding under waterfalls along the Marsyangdi gorge into the open bowl of Manang was breathtaking.',
+        bike: 'Royal Enfield Himalayan 450'
+      }
+    ],
+    relatedTourSlugs: ['annapurna-motorcycle-adventure', 'upper-mustang-motorcycle-expedition'],
+    seoTitle: 'Manang Motorcycle Expedition | 7 Days Road to Manang Nepal',
+    seoDescription: '7-Day Manang motorcycle tour along the rugged Marsyangdi Valley in Nepal with Himalayan Monster. Expert guides, full mechanical support.',
+    seoKeywords: ['Road to Manang motorcycle', 'Manang motorbike expedition', 'Annapurna circuit motorcycle', 'Himalayan Monster Manang'],
+    routeMapDescription: 'Pokhara → Dumre → Besisahar → Syange → Chamje → Dharapani → Chame → Upper Pisang → Manang (3,540m) → Pokhara.'
   },
+
+  // 05. UPPER MUSTANG MOTORCYCLE EXPEDITION (THE FLAGSHIP)
+  {
+    id: 'upper-mustang-motorcycle-expedition',
+    slug: 'upper-mustang-motorcycle-expedition',
+    packageNumber: '05',
+    title: 'Upper Mustang Motorcycle Expedition',
+    category: 'motorcycle',
+    isFlagship: true,
+    flagBadge: 'THE FLAGSHIP',
+    tagline: 'Ride Into the Forbidden Kingdom',
+    durationDays: 12,
+    durationLabel: '12 DAYS',
+    priceUsd: 2750,
+    price: '$2,750 / person',
+    startingPricePlaceholder: '$2,750 / person',
+    currency: 'USD',
+    difficulty: 'Challenging',
+    routeSummary: 'Kathmandu → Pokhara → Tatopani → Jomsom → Kagbeni → Chele → Ghami → Lo Manthang → Kagbeni → Tatopani → Pokhara → Kathmandu',
+    bestSeason: 'March – November (Trans-Himalayan Rain Shadow)',
+    maxAltitude: '4,660 m (Kora La Tibet Border) / 3,840 m (Lo Manthang)',
+    terrain: 'High-altitude desert canyons, red clay cliffs, dry riverbeds, cliffside passes, remote mountain dirt roads',
+    groupSize: '4–8 Riders (Small Group Guarantee)',
+    bikeProvided: 'Royal Enfield Himalayan 450 / Honda CRF300L',
+    heroImage: tour5Img,
+    galleryImages: [
+      tour5Img,
+      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    shortDescription: 'The ultimate Himalayan Monster motorcycle expedition. Travel from Kathmandu into the remote landscapes of Upper Mustang and ride through one of Nepal\'s most extraordinary regions.',
+    fullDescription: 'The ultimate Himalayan Monster motorcycle expedition.\n\nTravel from Kathmandu into the remote landscapes of Upper Mustang and ride through one of Nepal\'s most extraordinary regions.\n\nCross high mountain terrain, ancient villages and Himalayan desert landscapes before reaching legendary Lo Manthang.',
+    routeHighlights: [
+      'Upper Mustang',
+      'Lo Manthang',
+      'Kagbeni',
+      'Chele',
+      'Ghami',
+      'Kali Gandaki Valley',
+      'Ancient monasteries',
+      'Tibetan-influenced culture',
+      'Himalayan desert',
+      'Remote mountain roads'
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Kathmandu → Pokhara',
+        distanceKm: '200 km',
+        ridingTime: '6 hrs',
+        startAltitude: '1,400 m',
+        endAltitude: '820 m',
+        maxAltitude: '1,400 m',
+        highlights: [
+          'Travel to Pokhara',
+          'Motorcycle inspection and expedition briefing',
+          'Overnight: Pokhara'
+        ],
+        description: 'Travel to Pokhara. Motorcycle inspection, ergonomics setup, safety briefing, and welcome dinner in Lakeside Pokhara.',
+        overnight: 'Pokhara'
+      },
+      {
+        day: 2,
+        title: 'Pokhara → Tatopani',
+        distanceKm: '105 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '820 m',
+        endAltitude: '1,190 m',
+        maxAltitude: '1,500 m',
+        highlights: [
+          'Begin the expedition',
+          'Ride along the Kali Gandaki Valley',
+          'Overnight: Tatopani'
+        ],
+        description: 'Begin the expedition. Ride west from Pokhara into Beni and climb along the Kali Gandaki corridor to Tatopani hot springs.',
+        overnight: 'Tatopani'
+      },
+      {
+        day: 3,
+        title: 'Tatopani → Jomsom → Kagbeni',
+        distanceKm: '75 km',
+        ridingTime: '5 hrs',
+        startAltitude: '1,190 m',
+        endAltitude: '2,800 m',
+        maxAltitude: '2,800 m',
+        highlights: [
+          'Ride north through the Kali Gandaki Valley',
+          'Enter the trans-Himalayan desert',
+          'Overnight: Kagbeni'
+        ],
+        description: 'Ride north through the deepest gorge on Earth. Pass Marpha apple orchards and Jomsom into ancient Kagbeni checkpoint.',
+        overnight: 'Kagbeni'
+      },
+      {
+        day: 4,
+        title: 'Kagbeni → Chele',
+        distanceKm: '35 km',
+        ridingTime: '4 hrs',
+        startAltitude: '2,800 m',
+        endAltitude: '3,050 m',
+        maxAltitude: '3,100 m',
+        highlights: [
+          'Enter Upper Mustang restricted area',
+          'Red clay canyons and switchbacks',
+          'Overnight: Chele'
+        ],
+        description: 'Enter Upper Mustang with special permits stamped. Cross the Kali Gandaki bridge and climb steep red canyon switchbacks to Chele.',
+        overnight: 'Chele'
+      },
+      {
+        day: 5,
+        title: 'Chele → Ghami',
+        distanceKm: '45 km',
+        ridingTime: '5 hrs',
+        startAltitude: '3,050 m',
+        endAltitude: '3,520 m',
+        maxAltitude: '4,010 m (Nyi La Pass)',
+        highlights: [
+          'Cross high mountain terrain and traditional Mustang settlements',
+          'Cross Nyi La pass (4,010m)',
+          'Overnight: Ghami'
+        ],
+        description: 'Cross high mountain terrain and traditional Mustang settlements. Ride over Nyi La pass (4,010m) and descend past the longest Mani prayer wall in Nepal to Ghami.',
+        overnight: 'Ghami'
+      },
+      {
+        day: 6,
+        title: 'Ghami → Lo Manthang',
+        distanceKm: '40 km',
+        ridingTime: '4 hrs',
+        startAltitude: '3,520 m',
+        endAltitude: '3,840 m',
+        maxAltitude: '3,950 m (Lo La Pass)',
+        highlights: [
+          'Ride toward the legendary walled city',
+          'First view of Lo Manthang from Lo La Pass',
+          'Overnight: Lo Manthang'
+        ],
+        description: 'Ride through the red cliffs of Dhakmar and Charang Dzong fortress before ascending Lo La pass for the first jaw-dropping view of the ancient walled city of Lo Manthang.',
+        overnight: 'Lo Manthang'
+      },
+      {
+        day: 7,
+        title: 'Lo Manthang Exploration & Kora La Border',
+        distanceKm: '50 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '3,840 m',
+        endAltitude: '3,840 m',
+        maxAltitude: '4,660 m (Kora La)',
+        highlights: [
+          'Explore Lo Manthang and surrounding areas',
+          'Ride to Chhoser sky caves & Kora La Tibet Border (4,660m)',
+          'Overnight: Lo Manthang'
+        ],
+        description: 'Explore Lo Manthang and surrounding areas. Ride north to Chhoser cave monasteries and up to Kora La (4,660m) on the border of Tibet.',
+        overnight: 'Lo Manthang'
+      },
+      {
+        day: 8,
+        title: 'Lo Manthang → Ghami → Kagbeni',
+        distanceKm: '80 km',
+        ridingTime: '6 hrs',
+        startAltitude: '3,840 m',
+        endAltitude: '2,800 m',
+        maxAltitude: '4,010 m',
+        highlights: [
+          'Begin the journey out of Upper Mustang',
+          'Overnight: Kagbeni'
+        ],
+        description: 'Begin the journey out of Upper Mustang along alternate ridgelines, descending back toward Kagbeni.',
+        overnight: 'Kagbeni'
+      },
+      {
+        day: 9,
+        title: 'Kagbeni → Jomsom → Tatopani',
+        distanceKm: '75 km',
+        ridingTime: '5 hrs',
+        startAltitude: '2,800 m',
+        endAltitude: '1,190 m',
+        maxAltitude: '2,800 m',
+        highlights: [
+          'Descend through the Kali Gandaki Valley',
+          'Overnight: Tatopani'
+        ],
+        description: 'Descend south through the Kali Gandaki Valley. Soak in Tatopani hot springs to celebrate the successful descent.',
+        overnight: 'Tatopani'
+      },
+      {
+        day: 10,
+        title: 'Tatopani → Pokhara',
+        distanceKm: '105 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '1,190 m',
+        endAltitude: '820 m',
+        maxAltitude: '1,190 m',
+        highlights: [
+          'Return to Pokhara',
+          'Overnight: Pokhara'
+        ],
+        description: 'Return to Pokhara. Relax lakeside, enjoy a celebratory dinner, and share ride stories with the crew.',
+        overnight: 'Pokhara'
+      },
+      {
+        day: 11,
+        title: 'Pokhara → Kathmandu',
+        distanceKm: '200 km',
+        ridingTime: '6 hrs',
+        startAltitude: '820 m',
+        endAltitude: '1,400 m',
+        maxAltitude: '1,400 m',
+        highlights: [
+          'Return to Kathmandu',
+          'Overnight: Kathmandu'
+        ],
+        description: 'Return to Kathmandu by highway ride or scenic flight transfer. Farewell dinner in Thamel.',
+        overnight: 'Kathmandu'
+      },
+      {
+        day: 12,
+        title: 'Departure / Contingency Day',
+        distanceKm: '—',
+        ridingTime: '—',
+        startAltitude: '1,400 m',
+        endAltitude: '1,400 m',
+        maxAltitude: '1,400 m',
+        highlights: [
+          'Departure or contingency day'
+        ],
+        description: 'Departure or contingency day for international connections.',
+        overnight: 'Departure'
+      }
+    ],
+    inclusions: [
+      'Special Upper Mustang Restricted Area Permit ($500 USD government permit included)',
+      'ACAP (Annapurna Conservation Area) & TIMS permits',
+      'Royal Enfield Himalayan 450 / Honda CRF300L with all fuel',
+      '11 nights lodge & authentic Tibetan teahouse accommodation',
+      'All meals (Breakfast, Lunch, Dinner) throughout the 12 days',
+      '4x4 Backup Support Truck with spare parts, mechanic & luggage transport',
+      'Veteran local Mustang road captain & certified government liaison',
+      'Emergency oxygen cylinder, sat-com, and first aid kit'
+    ],
+    exclusions: [
+      'International flights to/from Nepal',
+      'Nepal tourist entry visa ($50 for 30 days)',
+      'Personal riding apparel (helmets, armored jackets available for rent)',
+      'Emergency medical evacuation & travel insurance',
+      'Alcohol, personal snacks, and staff tips'
+    ],
+    accommodation: 'Boutique hotels in Kathmandu and Pokhara; authentic Tibetan heritage guesthouses and teahouses across Mustang.',
+    preparationRequirements: [
+      'Valid motorcycle license (national or international)',
+      'Physical stamina for multi-day high-altitude riding (up to 4,660m)',
+      'Passport with at least 6 months validity for permit issuance'
+    ],
+    faqs: [
+      {
+        question: 'Why is Upper Mustang special?',
+        answer: 'Upper Mustang was closed to foreigners until 1992. It is a preserved enclave of ancient Tibetan Buddhist civilization, complete with 15th-century walled towns, royal palaces, and sacred sky caves.'
+      },
+      {
+        question: 'What is the road surface like in Upper Mustang?',
+        answer: 'Unpaved dirt tracks, packed gravel, dry riverbeds, and cliffside switchbacks. Our Royal Enfield Himalayan 450s and CRF300Ls are dialed specifically for this terrain.'
+      },
+      {
+        question: 'Can I visit Kora La on the Tibet border?',
+        answer: 'Yes! On Day 7, we ride from Lo Manthang to Kora La Pass at 4,660m, overlooking the vast Tibetan plateau.'
+      }
+    ],
+    reviews: [
+      {
+        id: 'rev-05-1',
+        riderName: 'Stefan Bergmann',
+        country: 'Austria',
+        countryCode: 'AT',
+        rating: 5,
+        date: 'September 2025',
+        comment: 'Riding into Lo Manthang is the pinnacle of adventure motorcycling. The support truck, food, bikes, and guides were world-class. Worth every cent.',
+        bike: 'Royal Enfield Himalayan 450'
+      }
+    ],
+    relatedTourSlugs: ['annapurna-motorcycle-adventure', 'mustang-enduro-mtb-expedition'],
+    seoTitle: 'Upper Mustang Motorcycle Expedition | 12 Days Flagship Nepal',
+    seoDescription: 'The ultimate 12-day Upper Mustang motorcycle tour to Lo Manthang & Kora La (4,660m) with Himalayan Monster. $500 permit, support truck & bikes included.',
+    seoKeywords: ['Upper Mustang motorcycle tour', 'Lo Manthang bike ride', 'Nepal motorcycle expedition', 'Himalayan Monster Upper Mustang'],
+    routeMapDescription: 'Kathmandu → Pokhara → Tatopani → Jomsom → Kagbeni → Chele → Ghami → Tsarang → Lo Manthang (3,840m) → Kora La Border (4,660m) → Pokhara → Kathmandu.'
+  },
+
+  // ==========================================
+  // MTB EXPEDITIONS
+  // ==========================================
+
+  // 06. POKHARA MTB EXPLORER
   {
     id: 'pokhara-mtb-explorer',
     slug: 'pokhara-mtb-explorer',
-    title: 'Pokhara Valley MTB Trail Explorer',
+    packageNumber: '06',
+    title: 'Pokhara MTB Explorer',
     category: 'mtb',
     isFlagship: false,
-    tagline: 'Ridge Downhills, Village Singletrack & Lake Trails',
-    durationDays: 2,
-    durationLabel: '1–3 DAYS',
-    difficulty: 'Moderate',
-    startingPricePlaceholder: 'Inquire for half-day / multi-day rates',
+    tagline: 'Discover Pokhara on Two Wheels',
+    durationDays: 1,
+    durationLabel: '1 DAY',
+    priceUsd: 125,
+    price: '$125 / person',
+    startingPricePlaceholder: '$125 / person',
     currency: 'USD',
-    bestSeason: 'Year-Round (Best: October – May)',
-    maxAltitude: '1,600 m (Sarangkot / Australian Camp Ridge)',
-    terrain: 'Forest singletrack, stone steps, village trails, lake rim paths',
+    difficulty: 'Beginner–Intermediate',
+    routeSummary: 'Pokhara → Sarangkot → Naudanda → Pokhara',
+    bestSeason: 'September – June',
+    maxAltitude: '1,592 m (Sarangkot)',
+    terrain: 'Countryside singletrack, village walking trails, forest descents, scenic ridgeline jeep tracks',
     groupSize: '1–6 Riders',
-    bikeProvided: 'Full Suspension or Hardtail MTB (Trek / Giant)',
-    heroImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop',
+    bikeProvided: 'Commencal / Trek Full-Suspension Enduro MTB (150–160mm)',
+    heroImage: tour6Img,
     galleryImages: [
-      'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop'
+      tour6Img,
+      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
     ],
-    shortDescription: 'Discover the hidden singletrack network around Pokhara valley: Sarangkot downhill runs, Peace Pagoda forest descents, and serene Begnas lake trails.',
-    fullDescription: 'Pokhara is Nepal’s mountain biking playground. With immediate access to 1,000m ridge uplifts, lush sub-tropical forests, technical stone steps, and fast loamy singletrack, our 1 to 3-day guided sessions are customized to your technical riding appetite.',
+    shortDescription: 'Explore Pokhara beyond the tourist streets. Ride through countryside trails, mountain villages and scenic viewpoints while enjoying panoramic Himalayan views.',
+    fullDescription: 'Explore Pokhara beyond the tourist streets.\n\nRide through countryside trails, mountain villages and scenic viewpoints while enjoying panoramic Himalayan views.\n\nHighlights include Sarangkot, Annapurna & Machhapuchhre views, village trails, and scenic flowing descents.',
     routeHighlights: [
-      'Sarangkot ridge downhill with panoramic Annapurna mountain backdrop',
-      'World Peace Pagoda forest singletrack down to Phewa Lake shore',
-      'Naudanda to Pame rural village flow trail',
-      'Begnas & Rupa lake quiet singletrack loops'
+      'Sarangkot',
+      'Annapurna views',
+      'Machhapuchhre',
+      'Village trails',
+      'Forest sections',
+      'Scenic descents',
+      'Pokhara Valley'
     ],
     itinerary: [
-      { day: 1, title: 'Sarangkot Downhill & Lakeside Secret Trails', distanceKm: '35 km', ridingTime: '4 hrs', startAltitude: '820 m', endAltitude: '820 m', highlights: ['4x4 uplift to Sarangkot', 'Fast ridge singletrack', 'Phewa lake shore boat transfer'], description: 'Morning shuttle to 1,600m on Sarangkot. Drop into sweeping trails overlooking Fishtail mountain before riding the scenic shore of Phewa.', overnight: 'Pokhara' },
-      { day: 2, title: 'World Peace Pagoda & Queen Forest Descent', distanceKm: '28 km', ridingTime: '4 hrs', startAltitude: '820 m', endAltitude: '820 m', highlights: ['Climb through Raniban forest', 'Peace Stupa panoramic point', 'Technical stone downhill'], description: 'Ride the southern ridge through protected forest trails with thrilling technical switchbacks.', overnight: 'Tour concludes' }
+      {
+        day: 1,
+        title: 'Pokhara → Sarangkot → Naudanda → Pokhara',
+        distanceKm: '35 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '820 m',
+        endAltitude: '820 m',
+        maxAltitude: '1,592 m',
+        highlights: [
+          'Bike fitting and safety briefing',
+          'Ride toward Sarangkot and continue through surrounding countryside trails',
+          'Stop at viewpoints and villages before descending through scenic trails toward Pokhara'
+        ],
+        description: 'Bike fitting and safety briefing at base camp. Ride toward Sarangkot and continue through surrounding countryside trails. Stop at viewpoints and traditional villages before descending through scenic flowing trails toward Pokhara.',
+        overnight: 'Pokhara'
+      }
     ],
-    inclusions: ['Premium MTB & helmet', 'Certified local guide', 'Vehicle shuttles / uplifts', 'Trail snacks & hydration'],
-    exclusions: ['Personal insurance', 'Specialty drinks'],
-    accommodation: 'Day tour / Flexible lodging',
-    preparationRequirements: ['Basic to intermediate off-road bicycle experience'],
-    faqs: [{ question: 'Do you offer half-day rides?', answer: 'Yes, we run morning and afternoon downhill sessions daily from our Pokhara shop.' }],
-    reviews: [{ id: 'rev-7', riderName: 'Elena Rostova', country: 'Canada', countryCode: 'CA', rating: 5, date: 'January 2026', comment: 'Such a fun blast! Our guide knew every hidden trail in the hills around Pokhara.', bike: 'Trek Full Suspension MTB' }],
-    relatedTourSlugs: ['mustang-mtb-tour', 'annapurna-mtb-tour', 'e-mtb-pokhara'],
-    seoTitle: 'Pokhara MTB Tours & Mountain Bike Trails | Himalayan Monster',
-    seoDescription: 'Explore the best mountain bike trails in Pokhara. Guided downhill and singletrack tours in Sarangkot, Peace Pagoda and Begnas Lake.',
-    seoKeywords: ['MTB tours Pokhara', 'mountain bike rental Pokhara', 'Sarangkot downhill MTB', 'Pokhara bike trails'],
-    routeMapDescription: 'Sarangkot Ridge → Pame → Phewa Lake → Raniban → World Peace Pagoda → Pokhara'
-  },
-  {
-    id: 'annapurna-mtb-tour',
-    slug: 'annapurna-mtb-tour',
-    title: 'Annapurna Valley MTB Adventure',
-    category: 'mtb',
-    isFlagship: false,
-    tagline: 'High-Alpine Singletrack Beneath Annapurna Massif',
-    durationDays: 6,
-    durationLabel: '5–7 DAYS',
-    difficulty: 'Demanding',
-    startingPricePlaceholder: 'Inquire for seasonal tour dates',
-    currency: 'USD',
-    bestSeason: 'March – May & September – November',
-    maxAltitude: '3,540 m (Manang Valley)',
-    terrain: 'Alpine singletrack, suspension bridges, pine forest loams, jeep trail traverses',
-    groupSize: '4–8 Riders',
-    bikeProvided: 'Full Suspension Enduro MTB',
-    heroImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop'
+    inclusions: [
+      'Premium full-suspension enduro mountain bike',
+      'Certified Himalayan MTB guide & trail mechanic',
+      'Uplift vehicle shuttle for main climb',
+      'Helmet & knee/elbow protective pads',
+      'Trailside organic village lunch & refreshments'
     ],
-    shortDescription: 'Ride through dramatic Himalayan river valleys, ancient pine forests, and alpine meadows in the shadow of Annapurna II and Gangapurna.',
-    fullDescription: 'A premier multi-day mountain bike tour taking riders into the upper reaches of the Annapurna Circuit. Experience thrilling technical descents, roaring glacial river crossings, and authentic teahouse hospitality.',
-    routeHighlights: [
-      'Suspension bridge river crossings over churning Himalayan rapids',
-      'High-altitude alpine singletrack through ancient pine woodlands',
-      'Spectacular views of 8,000m peaks from the saddle of your bike',
-      'Supported by 4x4 luggage transfer and certified mechanics'
+    exclusions: [
+      'Personal riding shoes & apparel',
+      'Personal travel & accident insurance',
+      'Alcoholic drinks & personal snacks',
+      'Tips for trail guide'
     ],
-    itinerary: [
-      { day: 1, title: 'Pokhara to Besisahar & Warmup Trail', distanceKm: '40 km riding', ridingTime: '4 hrs', startAltitude: '820 m', endAltitude: '760 m', highlights: ['River trails', 'Shakedown ride'], description: 'Transfer and ride along the foothills.', overnight: 'Besisahar' },
-      { day: 2, title: 'Besisahar to Tal Waterfall Basin', distanceKm: '32 km', ridingTime: '5 hrs', startAltitude: '760 m', endAltitude: '1,700 m', highlights: ['Canyon climb', 'Tal natural lake'], description: 'Rocky trail climbs into deep gorge.', overnight: 'Tal' },
-      { day: 3, title: 'Tal to Chame Pine Trails', distanceKm: '28 km', ridingTime: '4 hrs', startAltitude: '1,700 m', endAltitude: '2,670 m', highlights: ['Pine singletrack', 'View of Annapurna II'], description: 'Ride smooth forest trails and stone paths.', overnight: 'Chame' },
-      { day: 4, title: 'Chame to Upper Pisang & Braga', distanceKm: '35 km', ridingTime: '5 hrs', startAltitude: '2,670 m', endAltitude: '3,360 m', highlights: ['Pisang singletrack', 'Glacial rock walls'], description: 'Ascend into alpine paradise.', overnight: 'Pisang' },
-      { day: 5, title: 'Upper Valley Flow Trails & Descents', distanceKm: '45 km', ridingTime: '5 hrs', startAltitude: '3,360 m', endAltitude: '2,670 m', highlights: ['Fast gravity descent', 'Technical rock chutes'], description: 'Rip down high-speed singletracks.', overnight: 'Chame' },
-      { day: 6, title: 'Final Canyon Descent to Pokhara', distanceKm: '50 km', ridingTime: '5 hrs', startAltitude: '2,670 m', endAltitude: '820 m', highlights: ['Epic 1,800m vertical drop', 'Pokhara lakeside finish'], description: 'Massive descent finishing with beers in Lakeside Pokhara.', overnight: 'Tour concludes' }
+    accommodation: 'Day tour return to your Pokhara accommodation.',
+    preparationRequirements: [
+      'Basic to intermediate mountain bike trail experience',
+      'Comfortable sports clothing, flat shoes, and sunscreen'
     ],
-    inclusions: ['Full-suspension MTB', 'Lead guide & mechanic', 'Support vehicle', 'All lodge rooms & meals', 'Permits'],
-    exclusions: ['Personal gear', 'Travel insurance'],
-    accommodation: 'Mountain teahouses and lodges.',
-    preparationRequirements: ['Strong physical stamina and intermediate/advanced MTB skills'],
-    faqs: [{ question: 'How rough are the trails?', answer: 'The route features mixed terrain ranging from flowy pine needles to technical rocky sections with suspension bridges.' }],
-    reviews: [{ id: 'rev-8', riderName: 'Matteo Rossi', country: 'Italy', countryCode: 'IT', rating: 5, date: 'November 2025', comment: 'The sheer scale of the mountains while riding singletrack is beyond words.', bike: 'Trek Slash 8' }],
-    relatedTourSlugs: ['mustang-mtb-tour', 'pokhara-mtb-explorer', 'annapurna-motorcycle-tour'],
-    seoTitle: 'Annapurna MTB Tour Nepal | Mountain Biking Himalayas',
-    seoDescription: 'Experience 6 days of incredible mountain biking in the Annapurna range. Guided MTB tour with support vehicle from Pokhara.',
-    seoKeywords: ['Annapurna MTB tour', 'mountain biking Annapurna', 'Nepal singletrack tour', 'Pokhara MTB expeditions'],
-    routeMapDescription: 'Pokhara → Besisahar → Tal → Chame → Upper Pisang → Manang valley → Pokhara'
-  },
-  {
-    id: 'e-mtb-pokhara',
-    slug: 'e-mtb-pokhara',
-    title: 'Himalayan E-MTB Ridge & Valley Experiences',
-    category: 'e-mtb',
-    isFlagship: false,
-    tagline: 'Go Further, Climb Higher, Experience More of Wild Nepal',
-    durationDays: 2,
-    durationLabel: '1–4 DAYS',
-    difficulty: 'All Levels',
-    startingPricePlaceholder: 'Inquire for daily rental & guided E-MTB tours',
-    currency: 'USD',
-    bestSeason: 'Year-Round (September – June Optimal)',
-    maxAltitude: '2,100 m (Australian Camp / Panchase Ridge)',
-    terrain: 'Himalayan dirt climbs, panoramic ridgelines, village pathways, technical descents',
-    groupSize: '1–8 Riders',
-    bikeProvided: 'Specialized Turbo Levo / Trek Rail Bosch Gen 4 E-MTBs (700Wh+ Batteries)',
-    heroImage: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1600&auto=format&fit=crop',
-    galleryImages: [
-      'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop'
-    ],
-    shortDescription: 'Effortlessly conquer Nepal’s steep Himalayan climbs with premium Bosch and Brose-powered E-MTBs. Access remote ridges, ancient villages, and majestic mountain viewpoints without the exhaustion.',
-    fullDescription: 'Nepal’s terrain is famously vertical. With our fleet of flagship Specialized Turbo Levo and Trek Rail electric mountain bikes, those punishing 1,200m elevation gains turn into pure flow. Climb through rhododendron forests with 85–90Nm of smooth pedal assist, soak in 360-degree views of the Annapurnas, and charge down technical singletrack with full-suspension confidence.',
-    routeHighlights: [
-      'Conquer 1,000m+ Himalayan ascents with effortless turbo assist',
-      'Ride the high Panchase & Australian Camp ridges overlooking Fishtail peak',
-      'Explore hidden ethnic Gurung and Magar villages inaccessible to road vehicles',
-      'Latest 700Wh–750Wh batteries for all-day high-range exploration'
-    ],
-    itinerary: [
-      { day: 1, title: 'Sarangkot to Naudanda Panoramic E-MTB Ridge', distanceKm: '42 km', ridingTime: '4 hrs', startAltitude: '820 m', endAltitude: '1,500 m', highlights: ['Effortless climb to Sarangkot', 'Paved and dirt ridge trail to Naudanda', 'Organic lunch at mountain farmhouse'], description: 'Power up Sarangkot ridge using Turbo mode, continuing along the stunning ridge overlooking the Annapurna range before descending via Pame trail.', overnight: 'Pokhara' },
-      { day: 2, title: 'Australian Camp & Kande High Trail Explorer', distanceKm: '38 km', ridingTime: '4.5 hrs', startAltitude: '820 m', endAltitude: '2,050 m', highlights: ['High-altitude rhododendron forest climb', 'Direct view of Annapurna South (7,219m)', 'Thrilling forest singletrack descent'], description: 'Climb into the high foothills of the Annapurna sanctuary on our top-tier E-MTBs for unparalleled mountain panoramas.', overnight: 'Tour concludes' }
-    ],
-    inclusions: ['Specialized Turbo Levo or Trek Rail E-MTB', 'High-capacity battery & smart charger', 'Certified E-MTB guide', 'Helmet, gloves, and safety gear', 'Hydration and snacks'],
-    exclusions: ['Personal insurance', 'Alcohol'],
-    accommodation: 'Day tour / Flexible multi-day lodges',
-    preparationRequirements: ['Basic cycling ability (all fitness levels welcome thanks to electric assist)'],
     faqs: [
-      { question: 'What is the battery range in the mountains?', answer: 'Our 700Wh–750Wh batteries provide between 45–75 km of riding with up to 1,600m of cumulative climbing depending on assist level.' },
-      { question: 'Can I rent an E-MTB self-guided?', answer: 'Yes! We offer daily and weekly E-MTB rentals with pre-loaded GPX routes and phone handlebar mounts.' }
+      {
+        question: 'Are e-bikes available for this tour?',
+        answer: 'Yes! High-torque E-MTBs (Bosch/Shimano EP8) are available as an upgrade upon request.'
+      },
+      {
+        question: 'What is the terrain like?',
+        answer: 'The route features smooth singletrack, stone village steps, and scenic pine-forested dirt roads with options to adjust technical difficulty based on your skill level.'
+      }
     ],
     reviews: [
-      { id: 'rev-9', riderName: 'Rachel Vance', country: 'New Zealand', countryCode: 'NZ', rating: 5, date: 'December 2025', comment: 'The E-MTBs are a gamechanger in Nepal. I was able to climb high ridges without being a pro athlete and enjoyed the most incredible views of the Annapurnas.', bike: 'Specialized Turbo Levo' }
+      {
+        id: 'rev-06-1',
+        riderName: 'Sarah Jenkins',
+        country: 'United Kingdom',
+        countryCode: 'GB',
+        rating: 5,
+        date: 'December 2025',
+        comment: 'Brilliant day! We rode incredible singletrack high above Phewa Lake with the whole Annapurna massif in front of us. Top-notch bikes!',
+        bike: 'Trek Slash Enduro'
+      }
     ],
-    relatedTourSlugs: ['pokhara-mtb-explorer', 'mustang-mtb-tour', 'annapurna-mtb-tour'],
-    seoTitle: 'E-MTB Pokhara Nepal | Electric Mountain Bike Tours & Rentals',
-    seoDescription: 'Rent premium Specialized & Trek E-MTBs in Pokhara. Guided electric mountain bike tours to Sarangkot, Australian Camp, and Annapurna foothills.',
-    seoKeywords: ['E-MTB Pokhara', 'electric mountain bike rental Nepal', 'EMTB tours Pokhara', 'Sarangkot electric bike', 'Trek Rail Nepal'],
-    routeMapDescription: 'Pokhara → Sarangkot → Naudanda → Kande → Australian Camp → Pame → Pokhara'
+    relatedTourSlugs: ['annapurna-mtb-adventure', 'pokhara-himalayan-day-ride'],
+    seoTitle: 'Pokhara MTB Explorer | 1 Day Mountain Bike Tour Nepal',
+    seoDescription: '1-Day mountain bike tour in Pokhara with Himalayan Monster. Ride Sarangkot and Naudanda singletracks with Annapurna views.',
+    seoKeywords: ['Pokhara mountain bike tour', 'Sarangkot MTB', 'Nepal 1 day MTB tour', 'Himalayan Monster MTB'],
+    routeMapDescription: 'Pokhara Lakeside → Sarangkot Ridge Shuttle → Naudanda Flow Trails → Pame Singletrack → Pokhara.'
+  },
+
+  // 07. ANNAPURNA MTB ADVENTURE
+  {
+    id: 'annapurna-mtb-adventure',
+    slug: 'annapurna-mtb-adventure',
+    packageNumber: '07',
+    title: 'Annapurna MTB Adventure',
+    category: 'mtb',
+    isFlagship: false,
+    tagline: 'Ride Through the Annapurna Foothills',
+    durationDays: 5,
+    durationLabel: '5 DAYS',
+    priceUsd: 1150,
+    price: '$1,150 / person',
+    startingPricePlaceholder: '$1,150 / person',
+    currency: 'USD',
+    difficulty: 'Intermediate–Challenging',
+    routeSummary: 'Pokhara → Annapurna foothills → mountain villages → scenic trails → Pokhara',
+    bestSeason: 'March – May & September – December',
+    maxAltitude: '2,600 m (Foothill Ridges)',
+    terrain: 'Ancient Gurung walking paths, singletrack, village trails, rhododendron forests, fast downhill descents',
+    groupSize: '2–8 Riders',
+    bikeProvided: 'High-End Full-Suspension Enduro MTB (160mm travel)',
+    heroImage: tour7Img,
+    galleryImages: [
+      tour7Img,
+      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    shortDescription: 'A multi-day mountain biking adventure through the Annapurna foothills. Ride a combination of mountain roads, singletrack, village trails, forests and long scenic descents.',
+    fullDescription: 'A multi-day mountain biking adventure through the Annapurna foothills.\n\nRide a combination of mountain roads, singletrack, village trails, forests and long scenic descents.\n\nExperience Annapurna foothills, Gurung mountain villages, technical sections, and rural Nepal hospitality.',
+    routeHighlights: [
+      'Annapurna foothills',
+      'Mountain villages',
+      'Singletrack',
+      'Forest trails',
+      'Himalayan viewpoints',
+      'Technical sections',
+      'Scenic descents',
+      'Rural Nepal'
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Pokhara → Foothills',
+        distanceKm: '30 km',
+        ridingTime: '4 hrs',
+        startAltitude: '820 m',
+        endAltitude: '1,600 m',
+        maxAltitude: '1,750 m',
+        highlights: [
+          'Bike fitting, briefing and first riding section',
+          'Overnight: Mountain village'
+        ],
+        description: 'Bike fitting, briefing and first riding section into the rolling green foothills beneath Machhapuchhre. Settle into a traditional village eco-lodge.',
+        overnight: 'Mountain village'
+      },
+      {
+        day: 2,
+        title: 'Foothills → Higher Trails',
+        distanceKm: '38 km',
+        ridingTime: '5 hrs',
+        startAltitude: '1,600 m',
+        endAltitude: '2,200 m',
+        maxAltitude: '2,400 m',
+        highlights: [
+          'Climb toward higher terrain through villages and mountain trails',
+          'Overnight: Mountain village'
+        ],
+        description: 'Climb toward higher terrain through stone villages and pine forest trails with vehicle shuttle assists for major climbs.',
+        overnight: 'Mountain village'
+      },
+      {
+        day: 3,
+        title: 'Annapurna Mountain Riding',
+        distanceKm: '42 km',
+        ridingTime: '5–6 hrs',
+        startAltitude: '2,200 m',
+        endAltitude: '2,100 m',
+        maxAltitude: '2,600 m',
+        highlights: [
+          'The main adventure riding day',
+          'Challenging terrain, singletrack and spectacular Himalayan scenery',
+          'Overnight: Mountain village'
+        ],
+        description: 'The main adventure riding day. Expect challenging terrain, alpine singletrack, stone switchbacks, and spectacular views of Annapurna South and Hiunchuli.',
+        overnight: 'Mountain village'
+      },
+      {
+        day: 4,
+        title: 'Scenic Descent',
+        distanceKm: '35 km',
+        ridingTime: '4 hrs',
+        startAltitude: '2,100 m',
+        endAltitude: '1,100 m',
+        maxAltitude: '2,100 m',
+        highlights: [
+          'Long downhill sections through forests and villages',
+          'Overnight: Lower mountain region'
+        ],
+        description: 'Long downhill sections through rhododendron forests, terraced rice paddies, and suspension bridge crossings to a riverside lodge.',
+        overnight: 'Lower mountain region'
+      },
+      {
+        day: 5,
+        title: 'Return to Pokhara',
+        distanceKm: '28 km',
+        ridingTime: '3–4 hrs',
+        startAltitude: '1,100 m',
+        endAltitude: '820 m',
+        maxAltitude: '1,100 m',
+        highlights: [
+          'Final trail sections before returning to Pokhara'
+        ],
+        description: 'Final trail sections and fast descents along river canyons before cruising back to Pokhara for a celebratory wrap party.',
+        overnight: 'Pokhara'
+      }
+    ],
+    inclusions: [
+      'High-end full-suspension enduro mountain bike',
+      '4 nights village lodge and homestay accommodation',
+      'All meals (Breakfast, Lunch, Dinner) & trailside snacks',
+      'Dedicated 4x4 luggage transfer & shuttle vehicle',
+      'Certified lead MTB guide & mechanic with spare parts',
+      'ACAP conservation permits & local road fees'
+    ],
+    exclusions: [
+      'Personal cycling helmet & protective pads (rental available)',
+      'Travel & emergency medical evacuation insurance',
+      'Alcoholic drinks & personal lodge extras',
+      'Crew gratuities'
+    ],
+    accommodation: 'Handpicked Gurung village homestays and community eco-lodges.',
+    preparationRequirements: [
+      'Intermediate to advanced mountain bike singletrack skills',
+      'Comfort with natural trail features (roots, rocks, tight switchbacks)',
+      'Good cardiovascular fitness'
+    ],
+    faqs: [
+      {
+        question: 'How much climbing versus descending is involved?',
+        answer: 'We utilize 4x4 support vehicles for major uphill transfers to maximize over 8,000 vertical meters of world-class singletrack descents over the 5 days.'
+      },
+      {
+        question: 'Can I bring my own mountain bike?',
+        answer: 'Yes! Riders bringing their own bikes receive a discount. We provide full workshop assembly and tuning support at Base Camp.'
+      }
+    ],
+    reviews: [
+      {
+        id: 'rev-07-1',
+        riderName: 'Jonas Keller',
+        country: 'Switzerland',
+        countryCode: 'CH',
+        rating: 5,
+        date: 'November 2025',
+        comment: 'Riding Nepal\'s ancient walking trails is unlike anything in the Alps. The flow, the people, the hospitality—pure magic!',
+        bike: 'Commencal Meta AM'
+      }
+    ],
+    relatedTourSlugs: ['mustang-enduro-mtb-expedition', 'pokhara-mtb-explorer'],
+    seoTitle: 'Annapurna MTB Adventure | 5 Days Mountain Biking Nepal',
+    seoDescription: '5-Day Annapurna foothills mountain biking expedition in Nepal with Himalayan Monster. Singletrack, Gurung villages & vehicle shuttles.',
+    seoKeywords: ['Annapurna MTB tour', 'Nepal mountain bike 5 days', 'Singletrack Nepal', 'Himalayan Monster MTB'],
+    routeMapDescription: 'Pokhara → Ghandruk Foothills → Landruk Trails → Panchase Ridge → Pame Flow → Pokhara.'
+  },
+
+  // 08. MUSTANG ENDURO MTB EXPEDITION (THE MTB FLAGSHIP)
+  {
+    id: 'mustang-enduro-mtb-expedition',
+    slug: 'mustang-enduro-mtb-expedition',
+    packageNumber: '08',
+    title: 'Mustang Enduro MTB Expedition',
+    category: 'mtb',
+    isFlagship: true,
+    flagBadge: 'THE MTB FLAGSHIP',
+    tagline: 'Ride the Himalayan Desert',
+    durationDays: 9,
+    durationLabel: '9 DAYS',
+    priceUsd: 2100,
+    price: '$2,100 / person',
+    startingPricePlaceholder: '$2,100 / person',
+    currency: 'USD',
+    difficulty: 'Challenging',
+    routeSummary: 'Pokhara → Tatopani → Jomsom → Kagbeni → Muktinath → Mustang → Jomsom → Tatopani → Pokhara',
+    bestSeason: 'March – June & September – November',
+    maxAltitude: '3,800 m (Lupra Pass / Muktinath Ridge)',
+    terrain: 'High-desert natural singletrack, scree chutes, shale ridgelines, 1,200m vertical descents, river gorge tracks',
+    groupSize: '3–8 Riders (Experienced MTB)',
+    bikeProvided: 'High-Performance Full-Suspension Enduro MTB (160–170mm travel)',
+    heroImage: tour8Img,
+    galleryImages: [
+      tour8Img,
+      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop'
+    ],
+    shortDescription: 'This is Himalayan Monster\'s flagship mountain-bike expedition. Ride from the green valleys around Pokhara into the dry, dramatic landscape of Mustang. Mountain roads, singletrack, enduro sections, technical terrain, high-altitude riding and long descents.',
+    fullDescription: 'This is Himalayan Monster\'s flagship mountain-bike expedition.\n\nRide from the green valleys around Pokhara into the dry, dramatic landscape of Mustang.\n\nThe journey combines mountain roads, singletrack, enduro sections, technical terrain, high-altitude riding and long descents.\n\nRecommended for experienced mountain bikers.',
+    routeHighlights: [
+      'Mustang',
+      'Kali Gandaki Valley',
+      'Jomsom',
+      'Kagbeni',
+      'Muktinath',
+      'Himalayan desert',
+      'Enduro riding',
+      'Singletrack',
+      'Technical sections',
+      'Long descents',
+      'Traditional villages'
+    ],
+    itinerary: [
+      {
+        day: 1,
+        title: 'Pokhara → Tatopani',
+        distanceKm: '105 km',
+        ridingTime: '4–5 hrs (ride & shuttle)',
+        startAltitude: '820 m',
+        endAltitude: '1,190 m',
+        maxAltitude: '1,500 m',
+        highlights: [
+          'Begin the journey into the Kali Gandaki Valley',
+          'Overnight: Tatopani'
+        ],
+        description: 'Begin the journey into the Kali Gandaki Valley with a mix of warmup singletrack and 4x4 transfer. Settle in Tatopani hot springs.',
+        overnight: 'Tatopani'
+      },
+      {
+        day: 2,
+        title: 'Tatopani → Jomsom',
+        distanceKm: '65 km',
+        ridingTime: '5 hrs',
+        startAltitude: '1,190 m',
+        endAltitude: '2,720 m',
+        maxAltitude: '2,720 m',
+        highlights: [
+          'Continue north toward Jomsom',
+          'Enter the trans-Himalayan desert',
+          'Overnight: Jomsom'
+        ],
+        description: 'Continue north toward Jomsom through the deepest gorge on Earth, transitioning from green hills to high alpine desert.',
+        overnight: 'Jomsom'
+      },
+      {
+        day: 3,
+        title: 'Jomsom → Kagbeni',
+        distanceKm: '25 km',
+        ridingTime: '4 hrs',
+        startAltitude: '2,720 m',
+        endAltitude: '2,800 m',
+        maxAltitude: '2,900 m',
+        highlights: [
+          'Ride through the high Himalayan valley',
+          'Explore ancient mud-walled Kagbeni',
+          'Overnight: Kagbeni'
+        ],
+        description: 'Ride through the high Himalayan valley along ancient trading routes into the medieval fortified village of Kagbeni.',
+        overnight: 'Kagbeni'
+      },
+      {
+        day: 4,
+        title: 'Kagbeni → Muktinath',
+        distanceKm: '30 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '2,800 m',
+        endAltitude: '3,710 m',
+        maxAltitude: '3,710 m',
+        highlights: [
+          'Climb toward Muktinath',
+          'Explore holy temples and high desert plateaus',
+          'Overnight: Muktinath'
+        ],
+        description: 'Climb toward Muktinath (3,710m) with high-altitude views of Nilgiri, Dhaulagiri, and Thorong Peak.',
+        overnight: 'Muktinath'
+      },
+      {
+        day: 5,
+        title: 'Muktinath → Mustang Trails',
+        distanceKm: '35 km',
+        ridingTime: '5 hrs',
+        startAltitude: '3,710 m',
+        endAltitude: '3,200 m',
+        maxAltitude: '3,800 m (Lupra Pass)',
+        highlights: [
+          'Begin the main Mustang riding experience',
+          'Famous Lupra Valley 1,200m vertical singletrack descent',
+          'Overnight: Mustang region'
+        ],
+        description: 'Begin the main Mustang riding experience. Drop into the world-renowned Lupra Pass singletrack—1,200 vertical meters of natural flow and shale switchbacks through a hidden canyon.',
+        overnight: 'Mustang region'
+      },
+      {
+        day: 6,
+        title: 'Mustang Enduro Exploration',
+        distanceKm: '40 km',
+        ridingTime: '5–6 hrs',
+        startAltitude: '3,200 m',
+        endAltitude: '3,200 m',
+        maxAltitude: '3,800 m',
+        highlights: [
+          'Dedicated trail day',
+          'Explore surrounding Mustang trails and terrain',
+          'Technical riding and optional trail variations',
+          'Overnight: Mustang region'
+        ],
+        description: 'Dedicated trail day. Explore surrounding Mustang trails and terrain. Technical riding, shale ridge chutes, and optional trail variations depending on conditions and rider ability.',
+        overnight: 'Mustang region'
+      },
+      {
+        day: 7,
+        title: 'Mustang → Jomsom',
+        distanceKm: '30 km',
+        ridingTime: '4 hrs',
+        startAltitude: '3,200 m',
+        endAltitude: '2,720 m',
+        maxAltitude: '3,200 m',
+        highlights: [
+          'Begin the descent toward Jomsom',
+          'Overnight: Jomsom'
+        ],
+        description: 'Begin the descent toward Jomsom via Dhumba Lake and high cliff trails overlooking the Kali Gandaki river.',
+        overnight: 'Jomsom'
+      },
+      {
+        day: 8,
+        title: 'Jomsom → Tatopani',
+        distanceKm: '65 km',
+        ridingTime: '5 hrs',
+        startAltitude: '2,720 m',
+        endAltitude: '1,190 m',
+        maxAltitude: '2,720 m',
+        highlights: [
+          'Ride south through the Kali Gandaki Valley',
+          'Overnight: Tatopani'
+        ],
+        description: 'Ride south through the Kali Gandaki Valley with fast descents and river crossings, relaxing at Tatopani hot springs.',
+        overnight: 'Tatopani'
+      },
+      {
+        day: 9,
+        title: 'Tatopani → Pokhara',
+        distanceKm: '105 km',
+        ridingTime: '4–5 hrs',
+        startAltitude: '1,190 m',
+        endAltitude: '820 m',
+        maxAltitude: '1,190 m',
+        highlights: [
+          'Final riding day and return to Pokhara'
+        ],
+        description: 'Final riding day and return to Pokhara. Celebrate with the entire Himalayan Monster trail crew.',
+        overnight: 'Pokhara'
+      }
+    ],
+    inclusions: [
+      'High-performance full-suspension enduro mountain bike (160–170mm)',
+      '8 nights mountain lodge & Tibetan teahouse accommodation',
+      'All meals (Breakfast, Lunch, Dinner) & trailside nutrition',
+      '4x4 Support Vehicle for all luggage transfers, high pass shuttles & spares',
+      'ACAP & Mustang conservation area permits',
+      'Certified pro enduro mountain guide & dedicated trail mechanic',
+      'Full spares support & workshop tuning'
+    ],
+    exclusions: [
+      'International flights to/from Nepal',
+      'Personal travel & high-altitude medical evacuation insurance',
+      'Personal helmet, knee/elbow armor & riding kit (rental available)',
+      'Alcoholic drinks & personal lodge extras',
+      'Crew tips'
+    ],
+    accommodation: 'Handpicked authentic Tibetan heritage lodges in Kagbeni, Jomsom, Muktinath, and Tatopani.',
+    preparationRequirements: [
+      'Recommended for experienced mountain bikers with solid singletrack & enduro technical skills',
+      'Confidence on loose scree, rocky drop-offs, and high-speed descents',
+      'Good physical conditioning for riding above 3,500m'
+    ],
+    faqs: [
+      {
+        question: 'Why is the Lupra Valley descent so famous?',
+        answer: 'The Lupra Pass descent drops over 1,200 vertical meters through an ancient gorge. It is considered one of the top 5 natural singletrack mountain bike descents on the planet.'
+      },
+      {
+        question: 'Are full-face helmets recommended?',
+        answer: 'We provide both full-face and open-face enduro helmets. For high-speed shale sections, full-face protection is strongly recommended.'
+      }
+    ],
+    reviews: [
+      {
+        id: 'rev-08-1',
+        riderName: 'Matteo Rossi',
+        country: 'Italy',
+        countryCode: 'IT',
+        rating: 5,
+        date: 'October 2025',
+        comment: 'The Lupra Valley singletrack is mind-blowing. 9 days of unreal high-desert enduro riding. The guides knew every hidden line in Mustang!',
+        bike: 'Trek Slash 9.8'
+      }
+    ],
+    relatedTourSlugs: ['upper-mustang-motorcycle-expedition', 'annapurna-mtb-adventure'],
+    seoTitle: 'Mustang Enduro MTB Expedition | 9 Days Flagship Mountain Bike Nepal',
+    seoDescription: 'The ultimate 9-day Mustang Enduro mountain bike expedition in Nepal with Himalayan Monster. Lupra Pass, Muktinath & high-desert singletrack.',
+    seoKeywords: ['Mustang MTB tour', 'Nepal enduro mountain biking', 'Lupra pass singletrack', 'Himalayan Monster Mustang MTB'],
+    routeMapDescription: 'Pokhara → Tatopani → Jomsom → Kagbeni → Muktinath (3,710m) → Lupra Pass (3,800m) → Marpha → Tatopani → Pokhara.'
   }
 ];
+
+export const TOURS_DATA: Expedition[] = RAW_TOURS_DATA.map((t) => ({
+  ...t,
+  thingsToDo: DESTINATION_ACTIVITIES_BY_TOUR[t.id] || DESTINATION_ACTIVITIES_BY_TOUR[t.slug] || []
+}));
+

@@ -14,10 +14,10 @@ export const BUSINESS_INFO = {
   url: CANONICAL_DOMAIN,
   logo: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=800&auto=format&fit=crop',
   defaultOgImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
-  telephone: '+977 61 460000',
-  phoneClean: '+97761460000',
-  whatsapp: '+977 980 000 0000',
-  whatsappClean: '+9779800000000',
+  telephone: '+977 981-2100453',
+  phoneClean: '+9779812100453',
+  whatsapp: '+977 981-2100453',
+  whatsappClean: '+9779812100453',
   email: 'ride@himalayanmonster.com',
   address: {
     streetAddress: 'Lakeside, Ward No. 6',
@@ -33,8 +33,8 @@ export const BUSINESS_INFO = {
   openingHours: 'Mo-Su 07:00-20:00',
   priceRange: '$$ - $$$$',
   sameAs: [
-    'https://instagram.com/himalayanmonster',
-    'https://facebook.com/himalayanmonster',
+    'https://www.instagram.com/himalayanmonsternp/',
+    'https://www.facebook.com/profile.php?id=61593440248091',
     'https://youtube.com/@himalayanmonster'
   ],
   currenciesAccepted: 'USD, EUR, GBP, NPR, AUD, CAD',
@@ -406,7 +406,7 @@ export const STATIC_PAGE_SEO: Record<string, PageSeoConfig> = {
   },
   contact: {
     title: 'Contact Himalayan Monster | Pokhara Base Camp & WhatsApp Support',
-    description: 'Get in touch with Himalayan Monster in Lakeside Pokhara, Nepal. Phone: +977 61 460000, WhatsApp: +977 980 000 0000, email: ride@himalayanmonster.com. Visit our base camp workshop.',
+    description: 'Get in touch with Himalayan Monster in Lakeside Pokhara, Nepal. Phone & WhatsApp: +977 981-2100453, email: ride@himalayanmonster.com. Visit our base camp workshop.',
     canonicalPath: '/contact',
     ogTitle: 'Contact Pokhara Base Camp | Himalayan Monster Nepal',
     ogDescription: 'Direct contact details, WhatsApp route support, office location in Lakeside Pokhara, and operating hours for booking motorcycle and MTB tours in Nepal.',

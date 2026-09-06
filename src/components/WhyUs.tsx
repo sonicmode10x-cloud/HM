@@ -1,5 +1,6 @@
 import React from 'react';
 import { Compass, Users, Wrench, Mountain, Sliders, ShieldCheck } from 'lucide-react';
+import { HimalayanMonsterLogo } from './HimalayanMonsterLogo';
 
 interface WhyUsProps {
   onOpenPrivateRequest: () => void;
@@ -45,20 +46,25 @@ export const WhyUs: React.FC<WhyUsProps> = ({ onOpenPrivateRequest }) => {
   ];
 
   return (
-    <section className="py-24 bg-[#0c0c0e] text-white border-t border-white/5 relative">
+    <section className="py-24 bg-[#f8f9fa] text-slate-900 border-t border-slate-200 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <div className="max-w-3xl mb-16">
-          <span className="font-mono text-xs text-[#e06d2d] uppercase tracking-widest font-semibold block mb-2">
-            WHY HIMALAYAN MONSTER
-          </span>
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight leading-none">
-            NOT A TOUR.<br />
-            <span className="text-[#e06d2d]">AN EXPERIENCE.</span>
-          </h2>
-          <p className="mt-4 text-neutral-400 font-sans text-base sm:text-lg">
-            We don’t run passive sightseeing bus trips. We build raw, immersive, high-standard two-wheel expeditions for riders who want to experience Nepal authentically.
-          </p>
+        {/* Section Title & Official Brand Crest */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+          <div className="max-w-3xl">
+            <span className="font-mono text-xs text-[#e06d2d] uppercase tracking-widest font-bold block mb-2">
+              WHY HIMALAYAN MONSTER
+            </span>
+            <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight text-slate-900 leading-none">
+              NOT A TOUR.<br />
+              <span className="text-[#e06d2d]">AN EXPERIENCE.</span>
+            </h2>
+            <p className="mt-4 text-slate-600 font-sans text-base sm:text-lg">
+              We don’t run passive sightseeing bus trips. We build raw, immersive, high-standard two-wheel expeditions for riders who want to experience Nepal authentically.
+            </p>
+          </div>
+          <div className="hidden md:block shrink-0">
+            <HimalayanMonsterLogo variant="badge" height={90} />
+          </div>
         </div>
 
         {/* 5 Distinct Feature Blocks */}
@@ -69,27 +75,27 @@ export const WhyUs: React.FC<WhyUsProps> = ({ onOpenPrivateRequest }) => {
             return (
               <div
                 key={item.title}
-                className={`bg-[#16161c] p-8 rounded-sm border border-white/10 hover:border-[#e06d2d]/60 transition-all duration-300 flex flex-col justify-between ${isFullWidthMobile}`}
+                className={`bg-white p-8 rounded-sm border border-slate-200 hover:border-[#e06d2d] transition-all duration-300 flex flex-col justify-between shadow-xs hover:shadow-md ${isFullWidthMobile}`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-xs font-bold text-[#e06d2d] px-2 py-0.5 bg-white/5 rounded-sm">
+                    <span className="font-mono text-xs font-bold text-[#e06d2d] px-2.5 py-1 bg-[#e06d2d]/10 rounded-sm border border-[#e06d2d]/20">
                       {item.number}
                     </span>
-                    <div className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-white">
+                    <div className="w-10 h-10 rounded-sm bg-slate-100 flex items-center justify-center text-slate-900 border border-slate-200">
                       <Icon className="w-5 h-5 text-[#e06d2d]" />
                     </div>
                   </div>
 
-                  <h3 className="font-heading text-2xl font-black uppercase tracking-wide text-white mb-2">
+                  <h3 className="font-heading text-2xl font-black uppercase tracking-wide text-slate-900 mb-2">
                     {item.title}
                   </h3>
 
-                  <div className="font-sans text-sm font-semibold text-neutral-200 mb-3 leading-snug">
+                  <div className="font-sans text-sm font-bold text-slate-800 mb-3 leading-snug">
                     {item.subtitle}
                   </div>
 
-                  <p className="font-sans text-sm text-neutral-400 leading-relaxed">
+                  <p className="font-sans text-sm text-slate-600 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -98,7 +104,7 @@ export const WhyUs: React.FC<WhyUsProps> = ({ onOpenPrivateRequest }) => {
           })}
 
           {/* 6th Interactive Custom Request Card */}
-          <div className="bg-gradient-to-br from-[#1e1b18] to-[#16161c] p-8 rounded-sm border border-[#e06d2d]/40 flex flex-col justify-between">
+          <div className="bg-slate-900 p-8 rounded-sm border border-slate-800 flex flex-col justify-between text-white shadow-md">
             <div>
               <div className="font-mono text-xs text-[#e06d2d] uppercase tracking-widest font-bold mb-2">
                 PLAN A PRIVATE RIDE
@@ -113,7 +119,7 @@ export const WhyUs: React.FC<WhyUsProps> = ({ onOpenPrivateRequest }) => {
 
             <button
               onClick={onOpenPrivateRequest}
-              className="w-full bg-[#e06d2d] hover:bg-[#eb7a3b] text-black font-heading font-black text-xs tracking-wider py-3.5 px-4 rounded-sm uppercase transition-colors text-center cursor-pointer shadow-md"
+              className="w-full bg-[#e06d2d] hover:bg-[#d45e1d] text-white font-heading font-black text-xs tracking-wider py-3.5 px-4 rounded-sm uppercase transition-colors text-center cursor-pointer shadow-xs"
             >
               REQUEST CUSTOM ITINERARY
             </button>

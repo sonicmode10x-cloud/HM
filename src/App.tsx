@@ -332,7 +332,8 @@ function AppContent() {
             <ChooseYourRide
               onSelectCategory={(category) => {
                 if (category === 'motorcycle') handleNavigate('motorcycles');
-                else handleNavigate('mtb');
+                else if (category === 'mtb') handleNavigate('mtb');
+                else handleNavigate('expeditions');
               }}
             />
 
@@ -1215,14 +1216,14 @@ function AppContent() {
                   </button>
 
                   <a
-                    href="https://wa.me/9779800000000?text=Hello%20Himalayan%20Monster,%20I'm%20planning%20a%20private%20custom%20tour%20in%20Nepal."
+                    href="https://wa.me/9779812100453?text=Hello%20Himalayan%20Monster,%20I'm%20planning%20a%20private%20custom%20tour%20in%20Nepal."
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => Analytics.trackWhatsAppClick('Private Tours')}
                     className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-heading font-bold text-sm py-4 px-6 rounded-sm uppercase tracking-wider flex items-center justify-center gap-2"
                   >
                     <MessageCircle className="w-4 h-4" />
-                    <span>WhatsApp Route Director</span>
+                    <span>WhatsApp (+977 981-2100453)</span>
                   </a>
                 </div>
               </div>
