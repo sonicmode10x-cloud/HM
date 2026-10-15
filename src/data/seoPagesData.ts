@@ -197,5 +197,76 @@ export const SEO_LANDING_PAGES: Record<string, SeoLandingPageData> = {
         answer: 'Yes! All mountain teahouses and lodges in Nepal have standard electricity outlets where you can plug in the provided smart charger during lunch or overnight.'
       }
     ]
+  },
+  'upper-mustang-motorbike-tour': {
+    slug: 'upper-mustang-motorbike-tour',
+    h1: 'Upper Mustang Motorbike Tour: The Forbidden Kingdom on Two Wheels',
+    subheading: 'Ride beyond the Annapurnas into the ancient Tibetan kingdom of Lo Manthang at 3,840m',
+    targetKeyword: 'Upper Mustang motorbike tour',
+    seoTitle: 'Upper Mustang Motorbike Tour Nepal | 10 Days Lo Manthang | Himalayan Monster',
+    metaDescription: 'Ride to the ancient Tibetan walled city of Lo Manthang at 3,840m on Royal Enfield Himalayan 450s. All $500 RAP permits, 4x4 backup, and lead mechanics included.',
+    heroImage: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1600&auto=format&fit=crop',
+    category: 'motorcycle',
+    introContent: [
+      'Upper Mustang is the holy grail of motorcycle adventure in the Himalayas. Hidden behind the rain shadow of the Annapurna and Dhaulagiri massifs, this ancient Tibetan kingdom was closed to foreigners until 1992 and remains one of the world\'s most pristine high-altitude frontiers.',
+      'Unlike crowded highway routes, our Upper Mustang motorbike expedition takes you through dramatic wind-carved canyons, 1,000-year-old cliff cave monasteries, and high mountain passes reaching 4,600m at Kora La on the Tibetan border. We equip you with brand-new liquid-cooled Royal Enfield Himalayan 450s and Honda CRF300Ls, accompanied by dedicated 4x4 support, certified high-altitude medics, and master mechanics.'
+    ],
+    highlights: [
+      'Official Nepal restricted area permits (RAP $500) and ACAP handled with zero paperwork hassle',
+      'Modern 2026 Royal Enfield Himalayan 450 fleet with long-travel suspension and tubeless wheels',
+      'Exclusive access to Lo Manthang\'s walled royal palace and ancient Buddhist monasteries',
+      'Dedicated 4x4 support truck carrying all luggage, spares, tires, and medical oxygen',
+      'Small groups capped at 4–8 riders to ensure authentic immersion and maximum safety'
+    ],
+    featuredTourSlugs: ['upper-mustang-motorcycle-expedition', 'manang-motorcycle-expedition', 'annapurna-motorcycle-adventure'],
+    fleetTypes: ['Royal Enfield Himalayan 450', 'Honda CRF300L', 'Royal Enfield Scram 411'],
+    faqs: [
+      {
+        question: 'How much does the Upper Mustang motorbike tour cost and what permits are needed?',
+        answer: 'Upper Mustang requires a mandatory Special Restricted Area Permit (RAP) issued by Nepal Immigration costing $500 USD per person for the first 10 days, plus the ACAP permit. Our tour package is 100% all-inclusive—covering all permits, motorcycle, fuel, accommodation, meals, guide, mechanic, and 4x4 backup vehicle.'
+      },
+      {
+        question: 'Can you ride to the China/Tibet border at Kora La?',
+        answer: 'Yes! On Day 7 of our expedition, we ride north from Lo Manthang across the high desert plateau to Kora La Pass (4,660m) at Pillar 24 on the Nepal-Tibet border, offering breathtaking panoramic views of the Tibetan plateau.'
+      },
+      {
+        question: 'What is the best time of year for an Upper Mustang motorcycle tour?',
+        answer: 'Because Upper Mustang sits in the trans-Himalayan rain shadow, it receives very little rainfall. Prime riding months are April to June (Spring) and September to November (Autumn). You can even ride Mustang during the monsoon months of July and August when the rest of Nepal is rainy!'
+      }
+    ]
+  },
+  'dirt-bike-rental-pokhara': {
+    slug: 'dirt-bike-rental-pokhara',
+    h1: 'Dirt Bike Rental Pokhara: Honda CRF300L & Enduro Motorcycles',
+    subheading: 'High-clearance, lightweight trail and enduro bikes for rugged Himalayan backcountry',
+    targetKeyword: 'dirt bike rental Pokhara',
+    seoTitle: 'Dirt Bike Rental Pokhara | Honda CRF300L & Enduro Hire Nepal',
+    metaDescription: 'Rent lightweight dual-sport and enduro dirt bikes in Pokhara, Nepal. Honda CRF300L and lightweight trail bikes. Full armor, toolkits, and GPS trail routes.',
+    heroImage: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&w=1600&auto=format&fit=crop',
+    category: 'rental',
+    introContent: [
+      'Want to tackle tight Himalayan singletrack, steep river crossings, and rocky trails where heavy touring bikes struggle? Our Pokhara dirt bike rental fleet gives you the agility, ground clearance, and suspension performance you need.',
+      'We specialize in lightweight Honda CRF300Ls and tuned Hero XPulse 200 4Vs. Every bike is set up specifically for Nepal\'s rough backcountry with bash plates, handguards, upgraded knobby tires, heavy-duty inner tubes, and robust rear luggage racks.'
+    ],
+    highlights: [
+      'Honda CRF300L and lightweight enduro machines with 280mm+ ground clearance',
+      'Reinforced aluminum skid plates, heavy-duty Barkbusters, and radiator guards',
+      'Rental includes full tool kit, spare spark plug, tire levers, and hand pump',
+      'Free offline GPX tracks for Sarangkot, Australian Camp, and Mustang trails',
+      'Flexible daily, weekly, and monthly rates with pickup in Lakeside Pokhara'
+    ],
+    featuredTourSlugs: ['pokhara-himalayan-day-ride', 'annapurna-motorcycle-adventure', 'upper-mustang-motorcycle-expedition'],
+    fleetTypes: ['Honda CRF300L', 'Hero XPulse 200 4V Rally Edition', 'Royal Enfield Scram 411'],
+    faqs: [
+      {
+        question: 'Why choose a dirt bike like the Honda CRF300L over a Royal Enfield?',
+        answer: 'While the Royal Enfield Himalayan is supreme for open highway and loaded cruising, the Honda CRF300L weighs just 142 kg with 260mm of plush suspension travel—making it vastly superior for technical dirt, mud, sand, and steep switchbacks in Upper Mustang or Annapurna.'
+      },
+      {
+        question: 'Do you offer protective riding gear with dirt bike rentals?',
+        answer: 'Yes! We rent DOT and ECE certified full-face dirt helmets, MX goggles, armored roost deflectors/jackets, knee and elbow guards, and riding gloves right from our Lakeside workshop.'
+      }
+    ]
   }
 };
+

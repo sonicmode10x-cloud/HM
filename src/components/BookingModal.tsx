@@ -314,8 +314,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               />
             </div>
 
-            {/* Submit & 1-Click WhatsApp Buttons */}
-            <div className="space-y-3 pt-2">
+            {/* Submit Button */}
+            <div className="pt-2">
               <button
                 type="submit"
                 className="w-full bg-[#e06d2d] hover:bg-[#d45e1d] text-white font-heading font-black text-base tracking-wider py-4 px-6 rounded-sm uppercase transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-md"
@@ -323,16 +323,6 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 <Compass className="w-5 h-5" />
                 <span>CONFIRM BOOKING INQUIRY</span>
               </button>
-
-              <a
-                href={generateWhatsappUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-sans font-semibold text-xs py-3 px-4 rounded-sm flex items-center justify-center gap-2 text-center"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>Or Send Directly via WhatsApp (+977 Pokhara Base)</span>
-              </a>
             </div>
           </form>
         ) : (

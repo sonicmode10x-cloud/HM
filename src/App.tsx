@@ -55,6 +55,7 @@ function AppContent() {
   const [bookingTourSlug, setBookingTourSlug] = useState<string | undefined>(undefined);
   const [bookingCategory, setBookingCategory] = useState<TourCategory | 'rental'>('motorcycle');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [adminTab, setAdminTab] = useState<'logo' | 'preview-all' | 'seo' | 'export-import' | 'overview'>('logo');
   const { isConfigModalOpen, setIsConfigModalOpen } = useLogo();
 
   // Helper to map route and slug to canonical URL path
@@ -83,7 +84,7 @@ function AppContent() {
       case 'stories':
         return '/blog';
       case 'admin':
-        return '/admin';
+        return slug === 'seo' ? '/admin/seo' : '/admin';
       case 'article-detail':
         return `/blog/${slug || selectedArticleSlug}`;
       case 'tour-detail':
@@ -106,7 +107,7 @@ function AppContent() {
       return;
     }
 
-    if (clean === '/motorcycle-tours' || clean === '/motorcycle-tours-nepal' || clean === '/motorcycles') {
+    if (clean === '/motorcycle-tours' || clean === '/motorcycles') {
       setCurrentView('motorcycles');
       return;
     }
@@ -156,7 +157,14 @@ function AppContent() {
       return;
     }
 
+    if (clean === '/admin/seo' || clean === '/seo-audit' || clean === '/seo') {
+      setAdminTab('seo');
+      setCurrentView('admin');
+      return;
+    }
+
     if (clean === '/admin' || clean === '/admin/logo' || clean === '/admin/branding' || clean === '/admin/settings') {
+      setAdminTab('logo');
       setCurrentView('admin');
       return;
     }
@@ -227,6 +235,12 @@ function AppContent() {
       setSelectedSeoSlug(slug);
     } else if (view === 'article-detail' && slug) {
       setSelectedArticleSlug(slug);
+    } else if (view === 'admin') {
+      if (slug === 'seo') {
+        setAdminTab('seo');
+      } else {
+        setAdminTab('logo');
+      }
     }
 
     const newPath = getPathForRoute(view, slug);
@@ -284,7 +298,7 @@ function AppContent() {
   const selectedArticle = STORIES_DATA.find((a) => a.slug === selectedArticleSlug) || STORIES_DATA[0];
 
   if (currentView === 'admin') {
-    return <AdminDashboard onNavigate={(view, slug) => handleNavigate(view, slug)} />;
+    return <AdminDashboard onNavigate={(view, slug) => handleNavigate(view, slug)} initialTab={adminTab} />;
   }
 
   return (

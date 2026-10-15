@@ -8,14 +8,16 @@ import {
 } from 'lucide-react';
 import { useLogo, DEFAULT_LOGO_CONFIG, LogoConfig } from '../context/LogoContext';
 import { HimalayanMonsterLogo } from './HimalayanMonsterLogo';
+import { SeoAuditConsole } from './SeoAuditConsole';
 import { TOURS_DATA } from '../data/toursData';
 import { FLEET_DATA } from '../data/fleetData';
 
 interface AdminDashboardProps {
   onNavigate: (view: string, slug?: string) => void;
+  initialTab?: 'logo' | 'preview-all' | 'seo' | 'export-import' | 'overview';
 }
 
-export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onNavigate }) => {
+export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onNavigate, initialTab = 'logo' }) => {
   const { 
     config, 
     updateLogoImage, 
@@ -25,7 +27,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onNavigate }) =>
     isCustomImageActive 
   } = useLogo();
 
-  const [activeTab, setActiveTab] = useState<'logo' | 'overview' | 'preview-all' | 'export-import'>('logo');
+  const [activeTab, setActiveTab] = useState<'logo' | 'preview-all' | 'seo' | 'export-import' | 'overview'>(initialTab);
   const [logoInputMode, setLogoInputMode] = useState<'upload' | 'url' | 'presets'>('upload');
   const [urlInput, setUrlInput] = useState(config.customImageUrl || '');
   const [urlError, setUrlError] = useState('');
@@ -282,6 +284,18 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onNavigate }) =>
           >
             <Layout className="w-4 h-4" />
             <span>Live Layout Previews</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('seo')}
+            className={`flex items-center gap-2 px-4 py-2 rounded-sm font-heading font-bold text-sm tracking-wider uppercase transition-colors whitespace-nowrap ${
+              activeTab === 'seo'
+                ? 'bg-[#e06d2d] text-black shadow-md'
+                : 'text-neutral-400 hover:text-white bg-white/5 hover:bg-white/10'
+            }`}
+          >
+            <Globe className="w-4 h-4" />
+            <span>SEO & Search Audit</span>
           </button>
 
           <button
@@ -820,6 +834,11 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onNavigate }) =>
               </button>
             </div>
           </div>
+        )}
+
+        {/* TAB 3: SEO & SEARCH AUDIT */}
+        {activeTab === 'seo' && (
+          <SeoAuditConsole onNavigate={onNavigate} showToast={showToast} />
         )}
 
         {/* TAB 4: BASE CAMP STATUS */}

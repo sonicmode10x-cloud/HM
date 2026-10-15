@@ -1,8 +1,10 @@
 # Himalayan Monster Robots.txt
-# Website: https://himalayanmonster.com
+# Canonical Domain: https://himalayanmonster.com
 
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /admin/
 
-# Sitemap Reference
+# Sitemaps
 Sitemap: https://himalayanmonster.com/sitemap.xml

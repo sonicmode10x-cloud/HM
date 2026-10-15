@@ -10,6 +10,8 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) => {
   const seoLinks = [
+    { label: 'Upper Mustang Motorbike Tour', slug: 'upper-mustang-motorbike-tour' },
+    { label: 'Dirt Bike Rental Pokhara', slug: 'dirt-bike-rental-pokhara' },
     { label: 'Motorcycle Tours Pokhara', slug: 'motorcycle-tours-pokhara' },
     { label: 'Motorcycle Tours Nepal', slug: 'motorcycle-tours-nepal' },
     { label: 'Motorbike Rental Pokhara', slug: 'motorbike-rental-pokhara' },
@@ -142,6 +144,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onSelectSeoPage }) =
               <li className="pt-2 border-t border-slate-200">
                 <button onClick={() => onNavigate('admin')} className="text-slate-400 hover:text-[#e06d2d] transition-colors cursor-pointer flex items-center gap-1.5 font-mono text-xs">
                   <span>Base Camp Admin</span>
+                </button>
+              </li>
+              <li>
+                <button onClick={() => onNavigate('admin', 'seo')} className="text-slate-400 hover:text-[#e06d2d] transition-colors cursor-pointer flex items-center gap-1.5 font-mono text-xs">
+                  <span>SEO & Search Console</span>
                 </button>
               </li>
             </ul>

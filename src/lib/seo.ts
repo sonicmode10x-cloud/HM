@@ -113,6 +113,20 @@ export function getLocalBusinessJsonLd(): Record<string, any> {
         closes: '20:00'
       }
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.95',
+      reviewCount: '168',
+      bestRating: '5',
+      worstRating: '1'
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: BUSINESS_INFO.telephone,
+      contactType: 'customer service',
+      email: BUSINESS_INFO.email,
+      availableLanguage: ['English', 'Nepali', 'Hindi', 'German']
+    },
     sameAs: BUSINESS_INFO.sameAs,
     areaServed: [
       {
@@ -132,6 +146,22 @@ export function getLocalBusinessJsonLd(): Record<string, any> {
         name: 'Pokhara, Nepal'
       }
     ]
+  };
+}
+
+/**
+ * Global WebSite Schema Generator
+ */
+export function getWebSiteJsonLd(): Record<string, any> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${CANONICAL_DOMAIN}/#website`,
+    url: CANONICAL_DOMAIN,
+    name: BUSINESS_INFO.name,
+    alternateName: BUSINESS_INFO.alternateName,
+    description: BUSINESS_INFO.description,
+    inLanguage: 'en-US'
   };
 }
 

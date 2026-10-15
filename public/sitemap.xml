@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
@@ -7,91 +8,142 @@
   <!-- Core Primary Pages -->
   <url>
     <loc>https://himalayanmonster.com/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Himalayan Monster Motorcycle &amp; MTB Expeditions Nepal</image:title>
+      <image:caption>Two wheels wild Nepal: Guided high-altitude motorcycle and MTB tours in Pokhara</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/motorcycle-tours</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Motorcycle Tours Nepal Royal Enfield Himalayan 450</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/mtb-tours</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Himalayan MTB Singletrack and Enduro Tours Nepal</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/e-mtb-tours</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://himalayanmonster.com/motorbike-rental-pokhara</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://himalayanmonster.com/mountain-bike-rental-pokhara</loc>
-    <lastmod>2026-08-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1517649763962-0c623266ddc0?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>E-MTB Ridge Tours Pokhara and Annapurna Nepal</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/rentals</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Adventure Bike and Motorcycle Rental Fleet Pokhara</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://himalayanmonster.com/motorbike-rental-pokhara</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Motorbike Rental Pokhara Royal Enfield Himalayan 450</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://himalayanmonster.com/mountain-bike-rental-pokhara</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Pro Mountain Bike Rental Pokhara Full Suspension Enduro</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://himalayanmonster.com/upper-mustang-motorbike-tour</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Upper Mustang Motorbike Tour Forbidden Kingdom Lo Manthang</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://himalayanmonster.com/dirt-bike-rental-pokhara</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Dirt Bike Rental Pokhara Honda CRF300L Nepal Enduro</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/expeditions</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/about</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/contact</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/faq</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/private-tours</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/blog</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -99,28 +151,40 @@
   <!-- High-Intent SEO Destination & Rental Pages -->
   <url>
     <loc>https://himalayanmonster.com/motorcycle-tours-pokhara</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1558981403-c5f9899a28bc?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Guided Motorcycle Tours in Pokhara Nepal</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/motorcycle-tours-nepal</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Motorbike Tours Nepal High Mountain Passes</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/mtb-tours-pokhara</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>MTB Tours Pokhara Mountain Biking Singletrack</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/e-mtb-pokhara</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -128,56 +192,64 @@
   <!-- Individual Motorcycle & MTB Expedition Pages -->
   <url>
     <loc>https://himalayanmonster.com/tours/upper-mustang-motorcycle-tour</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Upper Mustang Motorcycle Expedition Lo Manthang</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/tours/pokhara-jomsom-motorcycle-tour</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&amp;w=1600&amp;auto=format&amp;fit=crop</image:loc>
+      <image:title>Pokhara to Jomsom Motorcycle Tour</image:title>
+    </image:image>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/tours/annapurna-motorcycle-tour</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/tours/manang-motorcycle-tour</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/tours/pokhara-mtb-explorer</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/tours/mustang-mtb-tour</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/tours/annapurna-mtb-tour</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/tours/e-mtb-pokhara</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -185,28 +257,28 @@
   <!-- Adventure Stories / Blog Article Pages -->
   <url>
     <loc>https://himalayanmonster.com/blog/400-km-into-mustang</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/blog/the-ultimate-motorcycle-route-through-nepal</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/blog/5-mtb-rides-you-need-to-experience-in-pokhara</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://himalayanmonster.com/blog/what-its-really-like-to-ride-the-himalayas</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
